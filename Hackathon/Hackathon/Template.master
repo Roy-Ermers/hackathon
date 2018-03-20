@@ -5,13 +5,14 @@
 <html>
 <head runat="server">
     <title></title>
+    <link href="<%=Page.ResolveUrl("Style/StyleSheet.css") %>" rel="stylesheet" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder id="body" runat="server">
         
         </asp:ContentPlaceHolder>
     </div>
