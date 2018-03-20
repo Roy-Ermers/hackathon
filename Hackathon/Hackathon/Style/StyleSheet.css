@@ -1,6 +1,7 @@
 ﻿:root
 {
-
+    --header-height: 60px;
+    --footer-height: 100px;
 }
 
 *
@@ -15,12 +16,55 @@ body
     font-family: 'Segoe UI', sans-serif;
 }
 
-.container
+a
 {
-
+    text-decoration: none;
+    color: #000;
 }
 
-header
+.container
 {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
 
+header 
+{
+    height: var(--header-height);
+    line-height: var(--header-height);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+header #logo
+{
+    float: left;
+}
+
+header #navigator
+{
+    float: right;
+    list-style: none
+}
+
+header #navigator li
+{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+main
+{
+    min-height: calc(100vh - var(--header-height));
+    margin-top: var(--header-height);
+}
+
+footer 
+{
+    height: var(--footer-height);
+    border-top: 1px solid #EFEFEF;
 }
