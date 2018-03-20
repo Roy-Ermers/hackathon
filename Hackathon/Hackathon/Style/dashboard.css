@@ -53,6 +53,8 @@
     background-image: url('http://www.wmo-magazine.nl/userfiles/Brabant%20natuur.jpg');
     background-position-y: -400px;
     background-size: cover;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
 }
 
 
