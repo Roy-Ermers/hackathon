@@ -11,11 +11,49 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="body" runat="server">
+        <header>
+            <div class="container">
+                <a href="">
+                    <h1 id="logo">
+                        BRABANT2GO
+                    </h1>
+                </a>
+                <ul id="navigator">
+                    <li>
+                        <a href="">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            DISTRICTS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            CONTACT
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            LOGIN
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <asp:ContentPlaceHolder id="body" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <section class="container">
+                <p>
+                    &copy; ... 2018
+                </p>
+            </section>
+        </footer>
     </form>
 </body>
 </html>
