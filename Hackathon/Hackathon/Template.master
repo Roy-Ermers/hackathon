@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Template.master.cs" Inherits="MasterPage" %>
+
 <!--dit is de template pagina-->
 <!DOCTYPE html>
 
@@ -10,7 +11,7 @@
     <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <asp:ContentPlaceHolder id="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
@@ -18,8 +19,7 @@
         <header>
             <div class="container">
                 <a href="">
-                    <h1 id="logo">
-                        BRABANT2GO
+                    <h1 id="logo">BRABANT2GO
                     </h1>
                 </a>
                 <ul id="navigator">
@@ -32,15 +32,13 @@
                     <li>
                         <a href="">CONTACT</a>
                     </li>
-                    <li>
-                        <a href="">LOGIN</a>
+                    <li runat="server" id="LoginContainer">
                     </li>
                 </ul>
             </div>
         </header>
         <main>
-            <asp:ContentPlaceHolder id="body" runat="server">
-        
+            <asp:ContentPlaceHolder ID="body" runat="server">
             </asp:ContentPlaceHolder>
         </main>
         <footer>

@@ -14,37 +14,51 @@ public static class Sql
 
 	public static DataTableReader Query(string query)
 	{
-		DataSet ds = new DataSet();
-		using (SqlConnection con = new SqlConnection(_DBConnection))
+		try
 		{
-			using (SqlCommand cmd = new SqlCommand(query, con))
+			DataSet ds = new DataSet();
+			using (SqlConnection con = new SqlConnection(_DBConnection))
 			{
-				cmd.Prepare();
-				con.Open();
-				SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
-				Adapter.Fill(ds);
-				con.Close();
-				return ds.CreateDataReader();
+				using (SqlCommand cmd = new SqlCommand(query, con))
+				{
+					cmd.Prepare();
+					con.Open();
+					SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
+					Adapter.Fill(ds);
+					con.Close();
+					return ds.CreateDataReader();
+				}
 			}
+		}
+		catch(SqlException Exception)
+		{
+			throw new Exception(query, Exception);
 		}
 	}
 	public static DataTableReader Procedure(string name, params SqlParameter[] parameter)
 	{
-		DataSet ds = new DataSet();
-		using (SqlConnection con = new SqlConnection(_DBConnection))
+		try
 		{
-			using (SqlCommand cmd = new SqlCommand(name, con) { CommandType = CommandType.StoredProcedure })
+			DataSet ds = new DataSet();
+			using (SqlConnection con = new SqlConnection(_DBConnection))
 			{
-				cmd.Parameters.AddRange(parameter);
-				cmd.Prepare();
-				con.Open();
-				SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
-				Adapter.Fill(ds);
-				con.Close();
-				if (ds.Tables.Count == 0)
-					return null;
-				return ds.CreateDataReader();
+				using (SqlCommand cmd = new SqlCommand(name, con) { CommandType = CommandType.StoredProcedure })
+				{
+					cmd.Parameters.AddRange(parameter);
+					cmd.Prepare();
+					con.Open();
+					SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
+					Adapter.Fill(ds);
+					con.Close();
+					if (ds.Tables.Count == 0)
+						return null;
+					return ds.CreateDataReader();
+				}
 			}
+		}
+		catch(SqlException exception)
+		{
+			throw new Exception(name, exception);
 		}
 	}
 
