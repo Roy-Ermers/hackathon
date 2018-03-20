@@ -13,7 +13,7 @@
 }
 
 body
-{4
+{
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -30,8 +30,7 @@ a
     overflow: hidden;
 }
 
-header 
-{
+header {
     height: var(--header-height);
     line-height: var(--header-height);
     width: 100%;
@@ -39,6 +38,7 @@ header
     top: 0;
     background: #fff;
     border-bottom: 1px solid #EFEFEF;
+    z-index: 9999;
 }
 
 header #logo
