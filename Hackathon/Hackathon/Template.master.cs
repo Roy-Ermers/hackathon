@@ -11,4 +11,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	{
 
 	}
+	protected void Login(object sender, EventArgs e)
+	{
+		Session["CurrentUser"] = 1;
+	}
 }
