@@ -4,15 +4,9 @@
     <title>TestPagina</title>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" Runat="Server">
-    <h1>Test 1234</h1>
-    <h1>Test35893</h1>
-    <%
-        var result = Sql.Query("SELECT * FROM  *");
-
-        while (result.Read())
-        {
-            Response.Write(result.GetInt32(0));
-        }
-        %>
+    <h1>
+        HOME
+    </h1>
+    <hr />
 </asp:Content>
 
