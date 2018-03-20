@@ -10,7 +10,7 @@ using System.Web;
 /// </summary>
 public static class Sql
 {
-	const string _DBConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dange\source\repos\hackathon\Hackathon\Hackathon\App_Data\Database.mdf;Integrated Security=True";
+	static string _DBConnection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + HttpContext.Current.Server.MapPath("~") + @"App_Data\Database.mdf;Integrated Security=True";
 
 	public static DataTableReader Query(string query)
 	{
