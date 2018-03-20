@@ -1,4 +1,5 @@
-﻿:root
+﻿@import url(Colors.css);
+:root
 {
     --header-height: 60px;
     --footer-height: 100px;
