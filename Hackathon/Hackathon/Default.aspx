@@ -1,14 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ContentPlaceHolderID="head" Runat="Server">
-    
+    <title>TestPagina</title>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" Runat="Server">
-    <div class="container">
-        <h1>
-            HOME
-        </h1>
-        <hr />
-    </div>
+    <h1>Test 1234</h1>
+    <h1>Test35893</h1>
+    <%
+        var result = Sql.Query("SELECT * FROM  *");
+
+        while (result.Read())
+        {
+            Response.Write(result.GetInt32(0));
+        }
+        %>
 </asp:Content>
 
