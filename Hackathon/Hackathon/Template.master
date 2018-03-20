@@ -32,16 +32,7 @@
                     <li>
                         <a href="">CONTACT</a>
                     </li>
-                    <li>
-                        <%
-                            if (Session["CurrentUser"] == null)
-                            {
-                                LinkButton link = new LinkButton() { Text = "Login" };
-                                link.Click += this.Login;
-                                form1.Controls.Add(link);
-                            }
-                        %>
-                       
+                    <li runat="server" id="LoginContainer">
                     </li>
                 </ul>
             </div>
