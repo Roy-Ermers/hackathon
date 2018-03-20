@@ -6,16 +6,50 @@
 <head runat="server">
     <title></title>
     <link href="<%=Page.ResolveUrl("Style/StyleSheet.css") %>" rel="stylesheet" />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder id="body" runat="server">
+        <header>
+            <div class="container">
+                <a href="">
+                    <h1 id="logo">
+                        BRABANT2GO
+                    </h1>
+                </a>
+                <ul id="navigator">
+                    <li>
+                        <a href="">HOME</a>
+                    </li>
+                    <li>
+                        <a href="">DISTRICTS</a>
+                    </li>
+                    <li>
+                        <a href="">CONTACT</a>
+                    </li>
+                    <li>
+                        <a href="">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <main>
+            <asp:ContentPlaceHolder id="body" runat="server">
         
-        </asp:ContentPlaceHolder>
-    </div>
+            </asp:ContentPlaceHolder>
+        </main>
+        <footer>
+            <section class="container">
+                <p>
+                    &copy; ... 2018
+                </p>
+            </section>
+        </footer>
     </form>
 </body>
 </html>
