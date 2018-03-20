@@ -34,3 +34,9 @@
     - Nee:    
 		- Login
 		- Register
+### Colors
+- #2f435e
+- #44566c 
+- #ececec 
+- #4b5e65 
+- #201b22
