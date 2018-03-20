@@ -1,7 +1,7 @@
 # hackathon
 
 ## Back-end
-Roy's taak
+> Roy's taak
 ### doen
 | num | taak | klaar |
 | ------------- |:-------------| -----:|
@@ -14,3 +14,23 @@ Roy's taak
 | num | taak | klaar |
 | ------------- |:-------------| -----:|
 | 1 | subaccounts | ❌ |
+
+## front-end
+> Ramon en Jonas' taak
+### sitemap
+- Home
+    - Districts
+    - Contact
+- Ingelogd:
+   - Ja:
+        - Bedrijf:
+            -  Index
+            -  Settings
+        	- Messages
+        - District:
+            - Index
+            - Settings
+            - Messages
+    - Nee:    
+		- Login
+		- Register
