@@ -6,7 +6,7 @@
 | num | taak | klaar |
 | ------------- |:-------------| -----:|
 | 1 | login systeem | ❌ |
-| 2 | url parser | ❌ |
+| 2 | url parser | ✔ |
 | 3 | informatie service | ❌ |
 | 4 | chatbox | ❌ |
 
@@ -35,8 +35,8 @@
 		- Login
 		- Register
 ### Colors
-- #2f435e
-- #44566c 
-- #ececec 
-- #4b5e65 
-- #201b22
+- <p style="color: #2f435e;">#2f435e</p>
+- <p style="color: #44566c;">#44566c</p>
+- <p style="color: #ececec;">#ececec</p>
+- <p style="color: #4b5e65;">#4b5e65</p>
+- <p style="color: #201b22;">#201b22</p>

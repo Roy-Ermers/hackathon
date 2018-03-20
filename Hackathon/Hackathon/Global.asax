@@ -1,32 +1,37 @@
 ﻿<%@ Application Language="C#" %>
 
-<script runat="server">
+<script RunAt="server">
 
-    void Application_Start(object sender, EventArgs e) 
+    void Application_Start(object sender, EventArgs e)
     {
         // Code that runs on application startup
 
     }
-    
-    void Application_End(object sender, EventArgs e) 
+
+    void Application_End(object sender, EventArgs e)
     {
         //  Code that runs on application shutdown
 
     }
-        
-    void Application_Error(object sender, EventArgs e) 
-    { 
+
+    void Application_Error(object sender, EventArgs e)
+    {
         // Code that runs when an unhandled error occurs
 
     }
 
-    void Session_Start(object sender, EventArgs e) 
+    protected void Application_BeginRequest(object sender, EventArgs e)
     {
-        // Code that runs when a new session is started
+        string[] path = Context.Request.FilePath.Substring(1).Split('/');
 
+        var UserId = Sql.Query($"SELECT Id FROM [User] WHERE [Name] ='{path[0]}';");
+        if (UserId.HasRows)
+        {
+            Context.RewritePath("Default.aspx");
+        }
     }
 
-    void Session_End(object sender, EventArgs e) 
+    void Session_End(object sender, EventArgs e)
     {
         // Code that runs when a session ends. 
         // Note: The Session_End event is raised only when the sessionstate mode
@@ -34,5 +39,5 @@
         // or SQLServer, the event is not raised.
 
     }
-       
+
 </script>
