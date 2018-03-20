@@ -1,0 +1,59 @@
+﻿.sidenav {
+    background-color: #4b5e65;
+    width: 250px;
+    height: 100vh;
+    float: left;
+}
+
+.sidenav ul li a {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    padding: 20px;
+    display: block;
+}
+
+.sidenav ul li {
+    transition: 0.2s all ease-in-out;
+    border-bottom: 1px #3a494f solid;
+}
+
+.sidenav ul li:hover {
+    background-color: #3a494f;
+}
+
+#sidenavimg {
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+
+.top .user {
+    float: right;
+    margin-right: 60px;
+    margin-top: 50px;
+    display: block;
+    color: #fff;
+}
+
+.top .user span {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.top {
+    border-bottom: 1px #3a494f solid;
+}
+
+#dashboard_header_image {
+    width: 100%;
+    height: 400px;
+    background-image: url('http://www.wmo-magazine.nl/userfiles/Brabant%20natuur.jpg');
+    background-position-y: -400px;
+    background-size: cover;
+}
+
+
+
