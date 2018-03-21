@@ -184,3 +184,26 @@ footer
     height: var(--footer-height);
     border-top: 1px solid #EFEFEF;
 }
+
+#NL_flag {
+    width: 30px;
+}
+
+#EN_flag {
+    height: 20px;
+    width: 30px;
+}
+
+#float_right a {
+    float: left;
+    list-style-type: none;
+    margin-left: 15px;
+}
+
+#float_right {
+    right: 0;
+    padding: 28px;
+    top: 0;
+    position: absolute;
+}
+
