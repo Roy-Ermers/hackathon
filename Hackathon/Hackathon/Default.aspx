@@ -5,8 +5,16 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="body" Runat="Server">
     <div class="district">
-        <div class="topper">
-
+        <div id="topper">
+            <div class="container">
+                <h1 id="title">
+                    HERE YOU CAN FIND THE BEST<br>
+                    DUTCH DESTRICT FOR YOUR COMPANY.
+                </h1>
+                <button>
+                    FIND A DESTRICT
+                </button>
+            </div>
         </div>
         <div class="content">
             <h1 class="title">
@@ -15,7 +23,7 @@
             <table class="stats">
                 <tr>
                     <td colspan="3">
-                        INWONERS
+                        <%=Translator.Translate("Citzens") %>INWONERS
                     </td>
                 </tr>
                 <tr>
