@@ -10,17 +10,14 @@
             <p class="user">Ramon<br /><span>Admin</span></p>
         </div>
         <ul>
-            <li>
-                <a href="">DashBoard</a>
+            <li class="active">
+                <a href="dashboard.aspx">DashBoard</a>
             </li>
             <li>
-                <a href="">Settings</a>
+                <a href="settings.aspx">Settings</a>
             </li>
             <li>
-                <a href="">Profile</a>
-            </li>
-            <li>
-                <a href="">Stats</a>
+                <a href="stats.aspx">Stats</a>
             </li>
         </ul>
     </div>
