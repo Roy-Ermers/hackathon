@@ -1,11 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="districts.aspx.cs" Inherits="Districts" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link rel="stylesheet" href="<%=Page.ResolveUrl("Style/animate.css") %>">
-    <script src='<%=Page.ResolveUrl("Js/wow.min.js") %>'></script>
-        <script>
-            new WOW().init();
-        </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <section id="sidebar">
@@ -54,7 +49,7 @@
                 var query = Sql.Query("SELECT * FROM [User] WHERE Type=1;");
                 while(query.Read()) {
                     Response.Write(
-                        "<div class='district wow fadeInUp' data-wow-delay='0.1s'>" +
+                        "<div class='district'>" +
                             "<div class='district-top'>" +
 
                             "</div>" +
