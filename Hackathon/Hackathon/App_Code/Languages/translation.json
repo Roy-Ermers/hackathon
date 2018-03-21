@@ -1,9 +1,12 @@
 ﻿{
   "dutch": {
     "people": "mensen",
-    "stool":  "stoel"
+    "WRONG_PASS": "Verkeerd wachtwoord.",
+    "NO_USERNAME": "Gebruikersnaam bestaat niet."
   },
   "english": {
-    "people":  "people"
+    "people": "people",
+    "WRONG_PASS": "Wrong password.",
+    "NO_USERNAME": "User does not exist."
   }
 }
