@@ -3,14 +3,22 @@
     "people": "mensen",
     "WRONG_PASS": "Verkeerd wachtwoord.",
     "NO_USERNAME": "Gebruikersnaam bestaat niet.",
-    "Citzens": "Burgers",
-    "Login":  "Inloggen"
+    "Citizens": "Burgers",
+    "Login": "Inloggen",
+    "Register": "Registreren",
+    "Intro": "HIER VIND JE DE BESTE GEMEENTE<br>VOOR UW BEDRIJF.",
+    "FindDist": "VIND EEN GEMEENTE",
+    "Districts": "Gemeenten"
   },
   "english": {
     "people": "people",
     "WRONG_PASS": "Wrong password.",
     "NO_USERNAME": "User does not exist.",
-    "Citzens": "Citzens",
-    "Login": "Login"
+    "Citizens": "Citzens",
+    "Login": "Login",
+    "Register": "Register",
+    "Intro": "HERE YOU CAN FIND THE BEST<br>DESTRICT FOR YOUR COMPANY.",
+    "FindDist": "FIND A DISTRICT",
+    "Districts": "Districts"
   }
 }

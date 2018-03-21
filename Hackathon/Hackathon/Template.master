@@ -19,20 +19,20 @@
     <form id="form1" runat="server">
         <header>
             <div class="container">
-                <a href="">
+                <a href="Default.aspx">
                     <h1 id="logo">
                         <span id="white">Brabant</span><span id="red">2GO</span>
                     </h1>
                 </a>
                 <ul id="navigator">
-                    <a href="">
+                    <a href="Default.aspx">
                         <li>
                             HOME
                         </li>
                     </a>
                     <a href="">
                         <li>
-                            DESTRICS
+                            <%=Translator.Translate("Districts") %>
                         </li>
                     </a>
                     <a href="">

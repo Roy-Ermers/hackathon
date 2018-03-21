@@ -32,7 +32,6 @@ a
 
 header {
     height: var(--header-height);
-    line-height: var(--header-height);
     width: 100%;
     position: fixed;
     top: 0;
@@ -41,9 +40,9 @@ header {
 }
 
 header #logo {
-float: left;
-font-weight: bold;
-transition: all ease-in-out 250ms;
+    float: left;
+    font-weight: bold;
+    line-height: calc(var(--header-height) - 10px);
 }
 
 header #logo #white {
@@ -57,16 +56,16 @@ border-bottom: 3px solid #fff;
 }
 
 header #navigator {
-float: right;
+    float: right;
+    line-height: var(--header-height);
 }
 
 header #navigator li, header #navigator a {
-display: inline-block;
-margin-left: 40px;
-font-size: 18px;
-color: #fff;
-transition: all ease-in-out 250ms;
-text-transform: uppercase;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
 }
 
 main

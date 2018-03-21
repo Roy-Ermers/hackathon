@@ -1,20 +1,25 @@
 ﻿if ($("#topper").length) {
+
     $("main").css("margin-top", "0");
-    $("header").css("background", "transparent");
 }
 
 var scroll = 0;
 $(window).scroll(
     function () {
         var top = $(this).scrollTop();
+        console.log(top);
 
         if (top > scroll) {
             if ($("#topper").length) {
                 $("header").css("background", "#2c3e50");
+                $(":root").css("--header-height", "75px");
             }
         } else {
             if ($("#topper").length) {
-                $("header").css("background", "transparent");
+                if (top <= 10) {
+                    $("header").css("background", "transparent");
+                    $(":root").css("--header-height", "100px");
+                }
             }
         }
         scroll = top;
