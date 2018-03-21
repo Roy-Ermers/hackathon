@@ -5,7 +5,7 @@
 ### doen
 | num | taak | klaar |
 | ------------- |:-------------| -----:|
-| 1 | login systeem | ❌ |
+| 1 | login systeem | ✔ |
 | 2 | url parser | ✔ |
 | 3 | informatie service | ❌ |
 | 4 | chatbox | ❌ |
