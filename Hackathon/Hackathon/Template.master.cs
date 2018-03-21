@@ -22,4 +22,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	{
 		Session["CurrentUser"] = 1;
 	}
+
+	protected void ChangeLanguage(object sender, EventArgs e)
+	{
+		Response.SetCookie(new HttpCookie("language", Languages.SelectedValue));
+	}
 }
