@@ -17,6 +17,9 @@
                 <button class="wow fadeInUp" data-wow-delay="0.6s">
                     <%=Translator.Translate("FindDist") %>
                 </button>
+                <h1 id="down">
+                    ▼
+                </h1>
             </div>
         </div>
        </asp:Content>

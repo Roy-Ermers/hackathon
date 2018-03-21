@@ -4,7 +4,44 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <section id="sidebar">
-        t
+        <ul>
+            <li>
+                <table>
+                    <tr>
+                        <td colspan="3">
+                            CITIZENS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            MIN
+                        </td>
+                        <td>
+                            <input id="citizens" type="range" min="0" max="100" />
+                        </td>
+                        <td>
+                            MAX
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            EVERAGE AGE
+                        </td>
+                    </tr>
+                    <tr rowspan="2">
+                        <td>
+                            MIN
+                        </td>
+                        <td>
+                            <input id="averageAge" type="range" min="0" max="100" />
+                        </td>
+                        <td>
+                            MAX
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
     </section>
     <section id="content">
         <div class="container">

@@ -99,6 +99,16 @@ cursor: pointer;
 transition: all ease-in-out 250ms;
 }
 
+#topper #down {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    top: calc(100vh - 100px);
+    color: #fff;
+    font-size: 50px;
+    animation: bounce 2.5s infinite;
+}
+
 #topper button:hover {
 background: #c0392b;
 border-color: #c0392b;
@@ -134,35 +144,47 @@ border-color: #c0392b;
     background var(--ColorDarkblue);
 }
 
-#sidebar
-{
+#sidebar {
     width: 20%;
+    min-width: 250px;
     height: calc(100vh - var(--header-height));
-    background: red;
+    position: fixed;
+    top: var(--header-height);
+    background: #4b5e65;
     float: left;
 }
 
 #content {
     width: 80%;
-    height: calc(100vh - var(--header-height));
-    background: blue;
+    min-height: calc(100vh - var(--header-height));
     float: right;
 }
 
-.district
-{
+.district {
     min-height: 250px;
     width: 300px;
-    background: red;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-right: 20px;
     cursor: pointer;
+    perspective: 500px;
 }
 
-.district-top
+.district-stats table
 {
+    width: 100%;
+    text-align: center;
+}
+
+
+.district-top {
     height: 150px;
-    border-bottom: 1px solid black;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../Images/topper.jpg') center no-repeat;
+    background-size: 100%;
+}
+
+.district-content {
+    background: #BDBBBD;
 }
 
 .district-content-title
@@ -183,4 +205,14 @@ footer
 {
     height: var(--footer-height);
     border-top: 1px solid #EFEFEF;
+}
+
+@keyframes bounce {
+    from {
+        top: calc(100vh - 120px);
+    }
+
+    to {
+        top: calc(100vh - 100px);
+    }
 }
