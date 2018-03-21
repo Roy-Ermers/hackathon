@@ -29,10 +29,7 @@
         </div>
         <div class="dashboard_info">
             <h1><%=Request.QueryString["UserName"]%></h1>
-            <p><% var Query = Sql.Query("SELECT info FROM [User] WHERE Id = 1");
-                   Query.Read();
-                   Response.Write(Query.GetValue(0));
-             %></p>
+            <p><%= Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]) %></p>
         </div>
     </div>
 </asp:Content>

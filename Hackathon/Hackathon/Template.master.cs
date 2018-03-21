@@ -26,8 +26,15 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	{
 		Sql.Procedure("Logout",new System.Data.SqlClient.SqlParameter("UserID",Session["UserID"]), new System.Data.SqlClient.SqlParameter("SessionKey",Session["SessionKey"]));
 	}
-	protected void ChangeLanguage(object sender, EventArgs e)
+	protected void ChangeLanguageNL(object sender, EventArgs e)
 	{
-		Response.SetCookie(new HttpCookie("language", Languages.SelectedValue));
+		Response.SetCookie(new HttpCookie("language", "dutch"));
+        Response.Redirect(Request.Url.ToString());
 	}
+
+    protected void ChangeLanguageEN(object sender, EventArgs e)
+    {
+        Response.SetCookie(new HttpCookie("language", "english"));
+        Response.Redirect(Request.Url.ToString());
+    }
 }
