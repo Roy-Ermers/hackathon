@@ -8,10 +8,8 @@
     "Register": "Registreren",
     "Intro": "HIER VIND JE DE BESTE GEMEENTE<br>VOOR UW BEDRIJF.",
     "FindDist": "VIND EEN GEMEENTE",
-    "Districts": "Gemeenten"
+    "Districts": "Gemeenten",
     "Citzens": "Burgers",
-    "Login": "Inloggen",
-    "Citizens": "Burgers",
     "dashboard": "Dashboard",
     "settings": "Instellingen",
     "password": "Wachtwoord",
@@ -24,7 +22,11 @@
     "people": "people",
     "WRONG_PASS": "Wrong password.",
     "NO_USERNAME": "User does not exist.",
-    "Citzens": "Citzens",
-    "Login": "Login"
+    "Citizens": "Citzens",
+    "Login": "Login",
+    "Register": "Register",
+    "Intro": "HERE YOU CAN FIND THE BEST<br>DESTRICT FOR YOUR COMPANY.",
+    "FindDist": "FIND A DISTRICT",
+    "Districts": "Districts"
   }
 }

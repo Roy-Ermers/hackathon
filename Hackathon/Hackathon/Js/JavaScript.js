@@ -1,5 +1,6 @@
 ﻿if ($("#topper").length) {
-
+    $("header").css("background", "transparent");
+    $(":root").css("--header-height", "100px");
     $("main").css("margin-top", "0");
 }
 
