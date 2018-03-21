@@ -2,11 +2,13 @@
   "dutch": {
     "people": "mensen",
     "WRONG_PASS": "Verkeerd wachtwoord.",
-    "NO_USERNAME": "Gebruikersnaam bestaat niet."
+    "NO_USERNAME": "Gebruikersnaam bestaat niet.",
+    "Citzens":  "Burgers"
   },
   "english": {
     "people": "people",
     "WRONG_PASS": "Wrong password.",
-    "NO_USERNAME": "User does not exist."
+    "NO_USERNAME": "User does not exist.",
+    "Citzens": "Citzens"
   }
 }

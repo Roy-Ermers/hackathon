@@ -7,6 +7,7 @@
 <head runat="server">
     <title></title>
     <link href="<%=Page.ResolveUrl("Style/StyleSheet.css") %>" rel="stylesheet" />
+    <script src="Js/JavaScript.js"></script>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet'>
@@ -19,20 +20,28 @@
         <header>
             <div class="container">
                 <a href="">
-                    <h1 id="logo">BRABANT2GO
+                    <h1 id="logo">
+                        <span id="white">Brabant</span><span id="red">2GO</span>
                     </h1>
                 </a>
                 <ul id="navigator">
-                    <li>
-                        <a href="">HOME</a>
-                    </li>
-                    <li>
-                        <a href="">DISTRICTS</a>
-                    </li>
-                    <li>
-                        <a href="">CONTACT</a>
-                    </li>
+                    <a href="">
+                        <li>
+                            HOME
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            DESTRICS
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            CONTACT
+                        </li>
+                    </a>
                     <li runat="server" id="LoginContainer">
+                        
                     </li>
                 </ul>
             </div>
