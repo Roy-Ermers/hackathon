@@ -17,7 +17,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <header>
+        <header class=" wow fadeInDown" data-wow-delay="0.8s">
             <div class="container">
                 <a href="Default.aspx">
                     <h1 id="logo">
