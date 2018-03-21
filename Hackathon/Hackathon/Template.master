@@ -30,7 +30,7 @@
                             HOME
                         </li>
                     </a>
-                    <a href="">
+                    <a href="districts.aspx">
                         <li>
                             <%=Translator.Translate("Districts") %>
                         </li>

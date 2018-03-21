@@ -30,20 +30,8 @@
                         <asp:TextBox TextMode="password" ID="password" runat="server"></asp:TextBox>
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <button runat="server" OnClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
-                    </td>
-                    <td>
-                        <button runat="server"><%= Translator.Translate("Register") %></button>
-                    </td>
-                </tr>
+                <button runat="server" OnClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
             </table>
-        </div>
-        <div id="register">
-            <h1>
-                REGISTER
-            </h1>
         </div>
     </div>
 </asp:Content>
