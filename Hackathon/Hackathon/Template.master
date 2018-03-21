@@ -46,6 +46,10 @@
                 <p>
                     &copy; ... 2018
                 </p>
+                <asp:DropDownList ID="Languages" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ChangeLanguage">
+                    <asp:ListItem Selected="True" Value="english">English</asp:ListItem>
+                    <asp:ListItem Value="dutch">Nederlands</asp:ListItem>
+                </asp:DropDownList>
             </section>
         </footer>
     </form>
