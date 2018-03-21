@@ -30,7 +30,7 @@ public static class Sql
 				}
 			}
 		}
-		catch(SqlException Exception)
+		catch(Exception Exception)
 		{
 			throw new Exception(query, Exception);
 		}
@@ -56,7 +56,7 @@ public static class Sql
 				}
 			}
 		}
-		catch(SqlException exception)
+		catch(Exception exception)
 		{
 			throw new Exception(name, exception);
 		}

@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class MasterPage : System.Web.UI.MasterPage
 {
+	public Language CurrentLanguage = Language.English;
 	protected void Page_Load(object sender, EventArgs e)
 	{
 		if (Session["CurrentUser"] == null)
