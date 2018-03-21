@@ -3,12 +3,14 @@
     "people": "mensen",
     "WRONG_PASS": "Verkeerd wachtwoord.",
     "NO_USERNAME": "Gebruikersnaam bestaat niet.",
-    "Citzens":  "Burgers"
+    "Citzens": "Burgers",
+    "Login":  "Inloggen"
   },
   "english": {
     "people": "people",
     "WRONG_PASS": "Wrong password.",
     "NO_USERNAME": "User does not exist.",
-    "Citzens": "Citzens"
+    "Citzens": "Citzens",
+    "Login": "Login"
   }
 }
