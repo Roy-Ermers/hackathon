@@ -28,10 +28,30 @@
         UserId.Read();
         if (UserId.HasRows)
         {
-            Context.RewritePath("../Dashboard.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
+            if (path.Length > 1)
+            {
+                if (path[1] == "dashboard")
+                {
+                    if (!HasAccess(UserId.GetInt32(0)))
+                        return;
+                    Context.RewritePath(HttpRuntime.AppDomainAppVirtualPath + "/dashboard.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
+                }
+            }
+            else
+                Context.RewritePath(HttpRuntime.AppDomainAppVirtualPath + "/profile.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
         }
     }
+    bool HasAccess(int DesiredUserID)
+    {
+        if (DesiredUserID != int.Parse(Session["CurrentUser"].ToString())) return false;
+        //check if the user is logged in
+        if (Session["CurrentUser"] == null || Session["SessionKey"] == null) return false;
 
+        //then check if the user is legit
+        var query = Sql.ScalarQuery("SELECT * FROM SessionKey WHERE Id = " + Session["CurrentUser"] + " AND SessionKey = " + Session["SessionKey"]);
+        return query != null;
+
+    }
     void Session_End(object sender, EventArgs e)
     {
         // Code that runs when a session ends. 

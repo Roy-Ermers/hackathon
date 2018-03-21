@@ -27,3 +27,24 @@ $(window).scroll(
         scroll = top;
     }
 );
+
+var param = new URLSearchParams(location.search);
+var citizen = parseInt(param.get("citizen"));
+var averageAge = parseInt(param.get("averageAge"))
+
+$("#citizens").val(citizen);
+$("#averageAge").val(averageAge);
+
+$("#citizens").change(
+    function () {
+        param.set("citizen", $(this).val());
+        location.search = param.toString();
+    }
+);
+
+$("#averageAge").change(
+    function () {
+        param.set("averageAge", $(this).val());
+        location.search = param.toString();
+    }
+);
