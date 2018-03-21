@@ -9,7 +9,6 @@
     "Intro": "HIER VIND JE DE BESTE GEMEENTE<br>VOOR UW BEDRIJF.",
     "FindDist": "VIND EEN GEMEENTE",
     "Districts": "Gemeenten",
-    "Citzens": "Burgers",
     "dashboard": "Dashboard",
     "settings": "Instellingen",
     "password": "Wachtwoord",
@@ -27,6 +26,13 @@
     "Register": "Register",
     "Intro": "HERE YOU CAN FIND THE BEST<br>DESTRICT FOR YOUR COMPANY.",
     "FindDist": "FIND A DISTRICT",
-    "Districts": "Districts"
+    "Districts": "Districts",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "password": "Password",
+    "repeatpassword": "Repeat Password",
+    "companyname": "Company name",
+    "companyinfo": "Company Information",
+    "companylogo": "Company logo"
   }
 }
