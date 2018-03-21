@@ -38,6 +38,7 @@
     margin: 0 auto;
     display: block;
     margin-top: 10px;
+    background-color: #5C6C6F;
 }
 
 .top .user {
@@ -70,7 +71,7 @@
 }
 
 .dashboard_content {
-    margin-left: 250px;
+    margin-left: 305px;
 }
 
 #dashboard_header_image img {
