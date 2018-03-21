@@ -32,7 +32,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <button runat="server" OnClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
+                        <button runat="server" OnServerClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
                     </td>
                     <td>
                         <button runat="server"><%= Translator.Translate("Register") %></button>

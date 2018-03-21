@@ -25,9 +25,10 @@
         string[] path = Context.Request.FilePath.Substring(1).Split('/');
 
         var UserId = Sql.Query($"SELECT Id FROM [User] WHERE [Name] ='{path[0]}';");
+        UserId.Read();
         if (UserId.HasRows)
         {
-            Context.RewritePath("Dashboard.aspx?UserId=" + UserId.GetValue(0) + "&" + path[0]);
+            Context.RewritePath("../Dashboard.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
         }
     }
 
