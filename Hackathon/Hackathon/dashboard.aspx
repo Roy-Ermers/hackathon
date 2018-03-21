@@ -11,10 +11,10 @@
         </div>
         <ul>
             <li class="active">
-                <a href="dashboard.aspx">DashBoard</a>
+                <a href="dashboard.aspx"><%= Translator.Translate("dashboard") %></a>
             </li>
             <li>
-                <a href="settings.aspx">Settings</a>
+                <a href="settings.aspx"><%= Translator.Translate("settings") %></a> 
             </li>
             <li>
                 <a href="stats.aspx">Stats</a>
