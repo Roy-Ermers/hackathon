@@ -1,4 +1,5 @@
-﻿if ($("#topper").length) {
+﻿window.scrollTo(0, 0);
+if ($("#topper").length) {
     $("header").css("background", "transparent");
     $(":root").css("--header-height", "100px");
     $("main").css("margin-top", "0");
