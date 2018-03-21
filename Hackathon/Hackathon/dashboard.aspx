@@ -14,7 +14,7 @@
                 <a href="dashboard.aspx"><%= Translator.Translate("dashboard") %></a>
             </li>
             <li>
-                <a href="settings.aspx"><%= Translator.Translate("settings") %></a> 
+                <a href="settings.aspx"><%= Translator.Translate("settings") %></a>   
             </li>
             <li>
                 <a href="stats.aspx">Stats</a>
