@@ -15,7 +15,8 @@
     "repeatpassword": "Herhaal Wachtwoord",
     "companyname": "Bedrijfs naam",
     "companyinfo": "Bedrijfs informatie",
-    "companylogo": "Bedrijfs logo"
+    "companylogo": "Bedrijfs logo",
+    "NO_ACCESS": "Geen toegang."
   },
   "english": {
     "people": "people",
@@ -33,6 +34,7 @@
     "repeatpassword": "Repeat Password",
     "companyname": "Company name",
     "companyinfo": "Company Information",
-    "companylogo": "Company logo"
+    "companylogo": "Company logo",
+    "NO_ACCESS": "No access."
   }
 }

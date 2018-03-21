@@ -1,33 +1,33 @@
 ﻿@import url(Colors.css);
 :root
 {
-    --header-height: 75px;
-    --footer-height: 100px;
+--header-height: 75px;
+--footer-height: 100px;
 }
 
 *
 {
-    margin: 0;
-    padding: 0;
-    outline: 0;
+margin: 0;
+padding: 0;
+outline: 0;
 }
 
 body
 {
-    font-family: 'Segoe UI', sans-serif;
+font-family: 'Segoe UI', sans-serif;
 }
 
 a
 {
-    text-decoration: none;
-    color: #000;
+text-decoration: none;
+color: #000;
 }
 
 .container
 {
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
+width: 80%;
+margin: 0 auto;
+overflow: hidden;
 }
 
 header {
@@ -36,16 +36,16 @@ header {
     position: fixed;
     top: 0;
     background: #2c3e50;
-    transition: all linear 250ms;
+    transition: all ease-in-out 250ms;
     z-index: 999;
 }
 
-header #logo {
-    float: left;
-    font-weight: bold;
-    line-height: calc(var(--header-height) - 10px);
-    transition: all linear 250ms;
-}
+    header #logo {
+        float: left;
+        font-weight: bold;
+        line-height: calc(var(--header-height) - 10px);
+        transition: all ease-in-out 250ms;
+    }
 
 header #logo #white {
 color: #fff;
@@ -57,24 +57,47 @@ color: #e74c3c;
 border-bottom: 3px solid #fff;
 }
 
-header #navigator {
-    float: right;
-    line-height: var(--header-height);
-}
+    header #navigator {
+        float: right;
+        line-height: var(--header-height);
+        transition: all ease-in-out 250ms;
+    }
 
 header #navigator li, header #navigator a {
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 18px;
-    color: #fff;
-    text-transform: uppercase;
-    transition: all linear 250ms;
+display: inline-block;
+margin-left: 20px;
+font-size: 18px;
+color: #fff;
+text-transform: uppercase;
+}
+
+header #languages {
+line-height: calc(var(--header-height) + 10px);
+float: left;
+position: absolute;
+top: 0;
+right: 0;
+transition: all ease-in-out 250ms;
+}
+
+header #languages li 
+{
+display: inline-block;
+}
+
+header #languages li img 
+{
+float: left;
+width: 30px;
+height: 20px;
+margin-right: 10px;
+
 }
 
 main
 {
-    min-height: calc(100vh - var(--header-height));
-    margin-top: var(--header-height);
+min-height: calc(100vh - var(--header-height));
+margin-top: var(--header-height);
 }
 #topper {
 height: 100vh;
@@ -100,13 +123,13 @@ transition: all ease-in-out 250ms;
 }
 
 #topper #down {
-    position: absolute;
-    width: 80%;
-    text-align: center;
-    top: calc(100vh - 100px);
-    color: #fff;
-    font-size: 50px;
-    animation: bounce 2.5s infinite;
+position: absolute;
+width: 80%;
+text-align: center;
+top: calc(100vh - 100px);
+color: #fff;
+font-size: 50px;
+animation: bounce 2.5s infinite;
 }
 
 #topper button:hover {
@@ -116,103 +139,104 @@ border-color: #c0392b;
 
 #login
 {
-    width: fit-content;
-    margin: 0 auto;
-    margin-top: 100px;
+width: fit-content;
+margin: 0 auto;
+margin-top: 100px;
 }
 
 #login table
 {
-    border: 1px solid black;
-    padding: 20px 40px;
+border: 1px solid black;
+padding: 20px 40px;
 }
 
 #login button {
-    padding: 5px 20px;
-    color: #fff;
-    font-size: 16px;
-    background: var(--ColorBlue);
-    border: 1px solid var(--ColorBlue);
-    margin-top: 40px;
-    cursor: pointer;
-    transition: all ease-in-out 250ms;
-    float: right;
+padding: 5px 20px;
+color: #fff;
+font-size: 16px;
+background: var(--ColorBlue);
+border: 1px solid var(--ColorBlue);
+margin-top: 40px;
+cursor: pointer;
+transition: all ease-in-out 250ms;
+float: right;
 }
 
 #login button:hover {
-    border-color: var(--ColorDarkblue);
-    background var(--ColorDarkblue);
+border-color: var(--ColorDarkblue);
+background var(--ColorDarkblue);
 }
 
 #sidebar {
-    width: 20%;
-    min-width: 250px;
-    height: calc(100vh - var(--header-height));
-    position: fixed;
-    top: var(--header-height);
-    background: #4b5e65;
-    float: left;
+width: 20%;
+min-width: 250px;
+height: calc(100vh - var(--header-height));
+position: fixed;
+top: var(--header-height);
+background: #4b5e65;
+float: left;
 }
 
 #content {
-    width: 80%;
-    min-height: calc(100vh - var(--header-height));
-    float: right;
+width: 80%;
+min-height: calc(100vh - var(--header-height));
+float: right;
 }
 
 .district {
-    min-height: 250px;
-    width: 300px;
-    display: inline-block;
-    margin-top: 25px;
-    margin-right: 20px;
-    cursor: pointer;
-    perspective: 500px;
+min-height: 250px;
+width: 300px;
+display: inline-block;
+margin-top: 25px;
+margin-right: 20px;
+cursor: pointer;
+perspective: 500px;
+text-align: center;
 }
 
 .district-stats table
 {
-    width: 100%;
-    text-align: center;
+width: 100%;
+text-align: center;
 }
 
 
 .district-top {
-    height: 150px;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../Images/topper.jpg') center no-repeat;
-    background-size: 100%;
+height: 150px;
+background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../Images/topper.jpg') center no-repeat;
+background-size: 100%;
 }
 
 .district-content {
-    background: #BDBBBD;
+background: #BDBBBD;
 }
 
 .district-content-title
 {
-    text-align: center;
+text-align: center;
 }
 
 .district-content-stats table
 {
-    width: 100%;
+width: 100%;
 }
 
 .district-content-stats table td {
-    text-align: center;
+text-align: center;
 }
 
 footer 
 {
-    height: var(--footer-height);
-    border-top: 1px solid #EFEFEF;
+height: var(--footer-height);
+border-top: 1px solid #EFEFEF;
 }
 
 @keyframes bounce {
-    from {
-        top: calc(100vh - 120px);
-    }
+from {
+top: calc(100vh - 120px);
+}
 
-    to {
-        top: calc(100vh - 100px);
-    }
+to {
+top: calc(100vh - 100px);
+}
 }

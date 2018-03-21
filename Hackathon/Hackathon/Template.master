@@ -45,7 +45,7 @@
                     </li>
                 </ul>
             </div>
-             <div id="float_right">
+             <ul id="languages">
                     <asp:LinkButton runat="server" onclick="ChangeLanguageNL">
                         <li>
                             <img src="<%=Page.ResolveUrl("Images/NL.png") %>" id="NL_flag" />
@@ -56,7 +56,7 @@
                             <img src="<%=Page.ResolveUrl("Images/EN.png") %>" id="EN_flag" />
                         </li>
                     </asp:LinkButton>
-                </div>
+                </ul>
         </header>
         <main>
             <asp:ContentPlaceHolder ID="body" runat="server">
