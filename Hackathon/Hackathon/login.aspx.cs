@@ -25,6 +25,7 @@ public partial class Login : System.Web.UI.Page
 		{
 			Session["CurrentUser"] = Sql.Query("SELECT Id FROM [User] WHERE [Name] = '" + username.Text + "'").GetInt32(0);
 			Session["SessionKey"] = sessionKey;
+			Response.Redirect("/" + username.Text + "/dashboard");
 		}
 		else
 		{
