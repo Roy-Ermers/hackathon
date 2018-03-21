@@ -4,19 +4,29 @@
     "WRONG_PASS": "Verkeerd wachtwoord.",
     "NO_USERNAME": "Gebruikersnaam bestaat niet.",
     "Citzens": "Burgers",
-    "Login":  "Inloggen"
-    "Citzens": "Burgers",
+    "Login": "Inloggen",
+    "Citizens": "Burgers",
     "dashboard": "Dashboard",
-    "settings": "Instellingen"
+    "settings": "Instellingen",
+    "password": "Wachtwoord",
+    "repeatpassword": "Herhaal Wachtwoord",
+    "companyname": "Bedrijfs naam",
+    "companyinfo": "Bedrijfs informatie",
+    "companylogo": "Bedrijfs logo"
   },
   "english": {
     "people": "people",
     "WRONG_PASS": "Wrong password.",
     "NO_USERNAME": "User does not exist.",
     "Citzens": "Citzens",
-    "Login": "Login"
-    "Citzens": "Citzens",
+    "Login": "Login",
+    "Citizens": "Citzens",
     "dashboard": "Dashboard",
-    "settings": "Settings"
+    "settings": "Settings",
+    "password": "Password",
+    "repeatpassword": "Repeat Password",
+    "companyname": "Company name",
+    "companyinfo": "Company information",
+    "companylogo": "Company logo"
   }
 }

@@ -26,19 +26,19 @@
             <h1><%= Translator.Translate("settings") %></h1>
             <table class="settings">
                 <tr>
-                    <td><label>Bedrijfsnaam</label></td>
+                    <td><label><%= Translator.Translate("companyname") %></label></td>
                     <td><asp:TextBox ID="TbBedrijfsnaam" runat="server" OnTextChanged="TbBedrijfsnaam_TextChanged"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Bedrijfsinfo</label></td>
+                    <td><label><%= Translator.Translate("companyinfo") %></label></td>
                     <td><asp:TextBox TextMode="multiline" Columns="50" Rows="5" ID="TbBedrijfsinfo" runat="server" OnTextChanged="TbBedrijfsinfo_TextChanged"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Bedrijfslogo</label></td>
+                    <td><label><%= Translator.Translate("companylogo") %></label></td>
                     <td><asp:FileUpload ID="FileUpload" runat="server" /></td>
                 </tr>
                 <tr>
-                    <td><label>Wachtwoord</label></td>
+                    <td><label><%= Translator.Translate("password") %></label></td>
                     <td><asp:TextBox ID="Password" runat="server" type="password"></asp:TextBox><br /><asp:TextBox ID="Password2" runat="server" type="password"></asp:TextBox></td>
                 </tr>
             </table>
