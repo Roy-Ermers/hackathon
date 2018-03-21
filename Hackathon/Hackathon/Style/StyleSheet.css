@@ -36,7 +36,7 @@ header {
     position: fixed;
     top: 0;
     background: #2c3e50;
-    transition: all ease-in-out 250ms;
+    transition: all linear 250ms;
     z-index: 999;
 }
 
@@ -44,6 +44,7 @@ header #logo {
     float: left;
     font-weight: bold;
     line-height: calc(var(--header-height) - 10px);
+    transition: all linear 250ms;
 }
 
 header #logo #white {
@@ -67,6 +68,7 @@ header #navigator li, header #navigator a {
     font-size: 18px;
     color: #fff;
     text-transform: uppercase;
+    transition: all linear 250ms;
 }
 
 main
@@ -115,22 +117,67 @@ border-color: #c0392b;
     padding: 20px 40px;
 }
 
-    #login button {
-        padding: 5px 20px;
-        color: #fff;
-        font-size: 16px;
-        background: var(--ColorBlue);
-        border: 1px solid var(--ColorBlue);
-        margin-top: 40px;
-        cursor: pointer;
-        transition: all ease-in-out 250ms;
-        float: right;
-    }
+#login button {
+    padding: 5px 20px;
+    color: #fff;
+    font-size: 16px;
+    background: var(--ColorBlue);
+    border: 1px solid var(--ColorBlue);
+    margin-top: 40px;
+    cursor: pointer;
+    transition: all ease-in-out 250ms;
+    float: right;
+}
 
-    #login button:hover {
-        border-color: var(--ColorDarkblue);
-        background var(--ColorDarkblue);
-    }
+#login button:hover {
+    border-color: var(--ColorDarkblue);
+    background var(--ColorDarkblue);
+}
+
+#sidebar
+{
+    width: 20%;
+    height: calc(100vh - var(--header-height));
+    background: red;
+    float: left;
+}
+
+#content {
+    width: 80%;
+    height: calc(100vh - var(--header-height));
+    background: blue;
+    float: right;
+}
+
+.district
+{
+    min-height: 250px;
+    width: 300px;
+    background: red;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.district-top
+{
+    height: 150px;
+    border-bottom: 1px solid black;
+}
+
+.district-content-title
+{
+    text-align: center;
+}
+
+.district-content-stats table
+{
+    width: 100%;
+}
+
+.district-content-stats table td {
+    text-align: center;
+}
 
 footer 
 {
