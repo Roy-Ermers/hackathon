@@ -39,6 +39,7 @@
                     </td>
                 </tr>
             </table>
+            <button runat="server" onserverclick="Logout">LogOut</button>
         </div>
         <div id="register">
             <h1>

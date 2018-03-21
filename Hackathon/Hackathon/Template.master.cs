@@ -22,7 +22,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	{
 		Response.Redirect("login.aspx");
 	}
-	protected void Logout(object sender, EventArgs e)
+	public void Logout(object sender, EventArgs e)
 	{
 		Sql.Procedure("Logout",new System.Data.SqlClient.SqlParameter("UserID",Session["UserID"]), new System.Data.SqlClient.SqlParameter("SessionKey",Session["SessionKey"]));
 	}
