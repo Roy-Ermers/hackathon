@@ -35,6 +35,12 @@ public static class Sql
 			throw new Exception(query, Exception);
 		}
 	}
+	public static object ScalarQuery(string query)
+	{
+		var SQLquery = Query(query);
+		SQLquery.Read();
+		return SQLquery.GetValue(0);
+	}
 	public static DataTableReader Procedure(string name, params SqlParameter[] parameter)
 	{
 		try
