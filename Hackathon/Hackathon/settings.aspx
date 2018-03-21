@@ -11,10 +11,10 @@
         </div>
         <ul>
             <li>
-                <a href="dashboard.aspx">DashBoard</a>
+                <a href="dashboard.aspx"><%= Translator.Translate("dashboard") %></a>
             </li>
             <li class="active">
-                <a href="settings.aspx">Settings</a>
+                <a href="settings.aspx"><%= Translator.Translate("settings") %></a>
             </li>
             <li>
                 <a href="stats.aspx">Stats</a>
@@ -23,22 +23,22 @@
     </div>
     <div class="dashboard_content">
         <div class="settings_company">
-            <h1>Settings</h1>
+            <h1><%= Translator.Translate("settings") %></h1>
             <table class="settings">
                 <tr>
-                    <td><label>Bedrijfsnaam</label></td>
+                    <td><label><%= Translator.Translate("companyname") %></label></td>
                     <td><asp:TextBox ID="TbBedrijfsnaam" runat="server" OnTextChanged="TbBedrijfsnaam_TextChanged"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Bedrijfsinfo</label></td>
+                    <td><label><%= Translator.Translate("companyinfo") %></label></td>
                     <td><asp:TextBox TextMode="multiline" Columns="50" Rows="5" ID="TbBedrijfsinfo" runat="server" OnTextChanged="TbBedrijfsinfo_TextChanged"></asp:TextBox></td>
                 </tr>
                 <tr>
-                    <td><label>Bedrijfslogo</label></td>
+                    <td><label><%= Translator.Translate("companylogo") %></label></td>
                     <td><asp:FileUpload ID="FileUpload" runat="server" /></td>
                 </tr>
                 <tr>
-                    <td><label>Wachtwoord</label></td>
+                    <td><label><%= Translator.Translate("password") %></label></td>
                     <td><asp:TextBox ID="Password" runat="server" type="password"></asp:TextBox><br /><asp:TextBox ID="Password2" runat="server" type="password"></asp:TextBox></td>
                 </tr>
             </table>
