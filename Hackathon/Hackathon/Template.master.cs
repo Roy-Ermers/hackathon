@@ -20,7 +20,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	}
 	protected void Login(object sender, EventArgs e)
 	{
-		Session["CurrentUser"] = 1;
+		Response.Redirect("login.aspx");
 	}
 
 	protected void ChangeLanguage(object sender, EventArgs e)

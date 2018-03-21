@@ -6,6 +6,6 @@
     <asp:Label runat="server" ID="warning"></asp:Label>
     <asp:TextBox TextMode="SingleLine" ID="username" runat="server"></asp:TextBox>
     <asp:TextBox TextMode="password" ID="password" runat="server"></asp:TextBox>
-    <asp:Button runat="server" Text="Submit" OnClick="Unnamed1_Click" />
+    <button runat="server" OnClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
 </asp:Content>
 
