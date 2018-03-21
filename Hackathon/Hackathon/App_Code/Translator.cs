@@ -34,9 +34,10 @@ public static class Translator
 		HttpCookie lang;
 		if (HttpContext.Current.Request.Cookies.Get("language") == null)
 		{
-			lang = new HttpCookie("language","english");
+			lang = new HttpCookie("language", "english");
+
 		}
-		lang = HttpContext.Current.Response.Cookies["language"];
+		else lang = HttpContext.Current.Response.Cookies["language"];
 		try
 		{
 			return Data[lang.Value][name].ReadAs<string>();
