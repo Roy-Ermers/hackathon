@@ -3,6 +3,12 @@
     "people": "mensen",
     "WRONG_PASS": "Verkeerd wachtwoord.",
     "NO_USERNAME": "Gebruikersnaam bestaat niet.",
+    "Citizens": "Burgers",
+    "Login": "Inloggen",
+    "Register": "Registreren",
+    "Intro": "HIER VIND JE DE BESTE GEMEENTE<br>VOOR UW BEDRIJF.",
+    "FindDist": "VIND EEN GEMEENTE",
+    "Districts": "Gemeenten"
     "Citzens": "Burgers",
     "Login": "Inloggen",
     "Citizens": "Burgers",
@@ -19,14 +25,6 @@
     "WRONG_PASS": "Wrong password.",
     "NO_USERNAME": "User does not exist.",
     "Citzens": "Citzens",
-    "Login": "Login",
-    "Citizens": "Citzens",
-    "dashboard": "Dashboard",
-    "settings": "Settings",
-    "password": "Password",
-    "repeatpassword": "Repeat Password",
-    "companyname": "Company name",
-    "companyinfo": "Company information",
-    "companylogo": "Company logo"
+    "Login": "Login"
   }
 }

@@ -27,7 +27,7 @@
         var UserId = Sql.Query($"SELECT Id FROM [User] WHERE [Name] ='{path[0]}';");
         if (UserId.HasRows)
         {
-            Context.RewritePath("Default.aspx");
+            Context.RewritePath("Dashboard.aspx?UserId=" + UserId.GetValue(0) + "&" + path[0]);
         }
     }
 

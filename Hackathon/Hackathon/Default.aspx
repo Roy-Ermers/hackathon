@@ -8,11 +8,10 @@
         <div id="topper">
             <div class="container">
                 <h1 id="title">
-                    HERE YOU CAN FIND THE BEST<br>
-                    DUTCH DESTRICT FOR YOUR COMPANY.
+                    <%=Translator.Translate("Intro") %>
                 </h1>
                 <button>
-                    FIND A DESTRICT
+                    <%=Translator.Translate("FindDist") %>
                 </button>
             </div>
         </div>
@@ -23,7 +22,7 @@
             <table class="stats">
                 <tr>
                     <td colspan="3">
-                        <%=Translator.Translate("Citzens") %>INWONERS
+                        <%=Translator.Translate("Citizens") %>
                     </td>
                 </tr>
                 <tr>
