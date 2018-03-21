@@ -1,7 +1,7 @@
 ﻿@import url(Colors.css);
 :root
 {
-    --header-height: 60px;
+    --header-height: 75px;
     --footer-height: 100px;
 }
 
@@ -60,12 +60,13 @@ header #navigator {
 float: right;
 }
 
-header #navigator li {
+header #navigator li, header #navigator a {
 display: inline-block;
 margin-left: 40px;
 font-size: 18px;
 color: #fff;
 transition: all ease-in-out 250ms;
+text-transform: uppercase;
 }
 
 main
@@ -75,7 +76,7 @@ main
 }
 #topper {
 height: 100vh;
-background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/topper.jpg') center fixed no-repeat;
+background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../Images/topper.jpg') center fixed no-repeat;
 background-size: cover;
 }
 
