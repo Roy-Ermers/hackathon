@@ -21,8 +21,9 @@
     "between": "tussen",
     "AvgWage": "Gemiddeld inkomen",
     "Inhabs": "Inwoners",
+    "Households": "Huishoudens",
     "aboutBrabant": "OVER BRABANT",
-    "Households":  "Huishoudens"
+    "stats": "Statistieken"
   },
   "english": {
     "people": "people",
@@ -46,7 +47,9 @@
     "between": "between",
     "AvgWage": "Average income",
     "Inhabs": "Citizens",
+    "Households": "Householdings",
     "aboutBrabant": "ABOUT BRABANT",
-    "Households": "Households"
+    "stats": "Statistics"
+
   }
 }
