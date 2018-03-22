@@ -64,28 +64,30 @@ public partial class Districts : HackPage
 		districts.InnerHtml = "";
 		foreach (int i in Districts)
 		{
-			string FilterTable = "";
+            var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";");
+     
+            string FilterTable = "";
 			foreach (Filter f in filters)
 			{
-				FilterTable += $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
+                var statValue = Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'");
+
+                    FilterTable += 
+                    $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
 					$"<tr>" +
-	 $"<td>{f.Min}</td>" +
-  $"<td>" +
-  $"<progress min='{f.Min}' max='{f.Max}' value='{Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'")}'></progress>" +
-  $"<td>{f.Max}</td>" +
-  $"</tr>";
-			}
-			districts.InnerHtml += @"<div class='district'>" +
-						"<div class='district-top'>" +
-							"<img id='avatar' src='" + UserAccount.ProfilePicture(i) + "'>" +
-						"</div>" +
-						"<div class='district-content'>" +
-							"<h1 class='district-content-title'>" +
-								Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";") +
-							"</h1>" +
+                    $"<td>" +
+                    $"<progress min='{f.Min}' max='{f.Max}' value='{statValue}'></progress>" +
+                    $"</tr>";
+			                    }
+			districts.InnerHtml += 
+                @"<div class='district'>" +
+				    "<div class='district-top'>" +
+					    "<img id='avatar' src='" + UserAccount.ProfilePicture(i) + "'>" +
+					"</div>" +
+					"<div class='district-content'>" +
+						"<h1 class='district-content-title'>" + name + "</h1>" +
 							"<div class='district-stats'>" +
 								"<table>" +
-								FilterTable +
+								    FilterTable +
 								"</table>" +
 							"</div>" +
 						"</div>" +
