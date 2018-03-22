@@ -33,7 +33,7 @@
         </div>
         <div class="dashboard_info">
             <h1><%=name %></h1>
-            <p><%=name %></p>
+            <p><%=Sql.ScalarQuery("SELECT Info FROM [User] WHERE Id = " + Request.QueryString["UserID"]) %></p>
         </div>
     </div>
 </asp:Content>
