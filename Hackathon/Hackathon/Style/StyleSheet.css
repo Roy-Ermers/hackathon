@@ -39,7 +39,7 @@ margin: 0 auto;
 overflow: hidden;
 }
 
-input:not([type='submit']):not([type='range'])
+#login input:not([type='submit']):not([type='range'])
 {
 width: 300px;
 height: 25px;
@@ -174,7 +174,6 @@ margin-bottom: 20px;
 
 #login-topper {
 height: 100px;
-line-height: 100px;
 background: var(--ColorDarkblue);
 border-top: 1px solid var(--ColorDarkblue);
 border-top-right-radius: 5px;
@@ -183,7 +182,14 @@ text-align: center;
 }
 
 #login-topper #title {
+    line-height: 100px;
     font-weight: 500;
+    font-family: 'Montserat', sans-serif;
+    color: #fff;
+}
+
+#login-topper #subtitle {
+    font-weight: 250;
     font-family: 'Montserat', sans-serif;
     color: #fff;
 }
