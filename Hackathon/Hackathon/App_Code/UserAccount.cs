@@ -16,13 +16,19 @@ public static class UserAccount
 		}
 	public static string ProfilePicture(int id)
 	{
-
-		return "data:image/png;base64, " + Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + id.ToString() + ";");
+		string qry = Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + id.ToString() + ";").ToString();
+		if (string.IsNullOrEmpty(qry))
+			return standardPF;
+		return "data:image/png;base64, " + qry;
 	}
 	public static string ProfilePicture()
 	{
-		if (HttpContext.Current.Session["CurrentUser"] != null)
-			return "data:image/png;base64, " + Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + HttpContext.Current.Session["CurrentUser"] + ";");
+		if (HttpContext.Current.Session["CurrentUser"] != null) {
+			var qry = Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + HttpContext.Current.Session["CurrentUser"] + ";");
+			if (qry != null)
+				return "data:image/png;base64, " + qry;
+			else return standardPF;
+		}
 		else return standardPF;
 		}
 }
