@@ -10,7 +10,6 @@
         <div class="dashboard_info">
             <h1><%=Translator.Translate("stats") %></h1>
             <asp:Table runat="server" ID="stats_table">
-
             </asp:Table>
         </div>
     </div>
