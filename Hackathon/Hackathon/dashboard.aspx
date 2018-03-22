@@ -20,7 +20,7 @@
                 <a href="stats.aspx">Stats</a>
             </li>
             <li>
-                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" href="../">Logout</asp:LinkButton>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
             </li>
         </ul>
     </div>
