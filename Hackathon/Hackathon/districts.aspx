@@ -1,9 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="districts.aspx.cs" Inherits="Districts" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
     <section id="sidebar">
         <ul>
             <li>
@@ -18,24 +17,24 @@
                             <asp:TextBox ID="citizensMin" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>
+                            <%=Translator.Translate("between") %>
+
                         </td>
                         <td>
+                            <asp:TextBox ID="citizensMax" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            EVERAGE AGE
+                        <td colspan="3">EVERAGE AGE
                         </td>
                     </tr>
                     <tr rowspan="2">
-                        <td>
-                            MIN
+                        <td>MIN
                         </td>
                         <td>
                             <input id="averageAge" type="range" min="0" max="100" />
                         </td>
-                        <td>
-                            MAX
+                        <td>MAX
                         </td>
                     </tr>
                 </table>
@@ -46,7 +45,8 @@
         <div class="container">
             <%
                 var query = Sql.Query("SELECT * FROM [User] WHERE Type=1;");
-                while(query.Read()) {
+                while (query.Read())
+                {
                     Response.Write(
                         "<div class='district'>" +
                             "<div class='district-top'>" +
