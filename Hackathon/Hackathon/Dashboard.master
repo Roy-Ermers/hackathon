@@ -9,7 +9,9 @@
     <% var name = Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
     <div class="sidenav">
         <div class="top">
-            <img id="sidenavimg" src="<%=UserAccount.ProfilePicture() %>" />
+            <div class="avatar">
+                <img id="sidenavimg" src="<%=UserAccount.ProfilePicture() %>" />
+            </div>
             <p class="user"><%=name %><br />
                 <span>Admin</span></p>
         </div>

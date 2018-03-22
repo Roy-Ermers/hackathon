@@ -29,7 +29,7 @@
     background-color: #3a494f;
 }
 
-.sidenav #avatar {
+.sidenav .avatar {
     width: 75px;
     height: 75px;
     border-radius: 100%;
