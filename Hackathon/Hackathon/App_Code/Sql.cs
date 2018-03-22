@@ -26,7 +26,13 @@ public static class Sql
 					SqlDataAdapter Adapter = new SqlDataAdapter(cmd);
 					Adapter.Fill(ds);
 					con.Close();
+					if(ds.Tables.Count>0)
 					return ds.CreateDataReader();
+					else
+					{
+						//table is empty
+						return null;
+					}
 				}
 			}
 		}
@@ -38,8 +44,12 @@ public static class Sql
 	public static object ScalarQuery(string query)
 	{
 		var SQLquery = Query(query);
-		SQLquery.Read();
-		return SQLquery.GetValue(0);
+		if (SQLquery != null && SQLquery.HasRows)
+		{
+			SQLquery.Read();
+			return SQLquery.GetValue(0);
+		}
+		else return null;
 	}
 	public static DataTableReader Procedure(string name, params SqlParameter[] parameter)
 	{
@@ -67,5 +77,4 @@ public static class Sql
 			throw new Exception(name, exception);
 		}
 	}
-
 }

@@ -32,7 +32,13 @@
             {
                 if (path[1] == "dashboard")
                 {
-                    Context.RewritePath(HttpRuntime.AppDomainAppVirtualPath + "/dashboard.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
+                    if (path.Length > 2)
+                    {
+                        if(path[2]=="settings")
+                            Context.RewritePath(HttpRuntime.AppDomainAppVirtualPath + "/settings.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
+                    }
+                    else
+                        Context.RewritePath(HttpRuntime.AppDomainAppVirtualPath + "/dashboard.aspx?UserId=" + UserId.GetValue(0) + "&UserName=" + path[0]);
                 }
             }
             else
