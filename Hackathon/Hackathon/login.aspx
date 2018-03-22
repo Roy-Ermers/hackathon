@@ -5,45 +5,25 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <div class="container">
         <div id="login">
-            <h1>
-                LOGIN
-            </h1>
-            <table>
-                <tr>
-                    <td colspan="2">
-                        <asp:Label runat="server" ID="warning"></asp:Label>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Username:
-                    </td>
-                    <td>
-                        <asp:TextBox TextMode="SingleLine" ID="username" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Password
-                    </td>
-                    <td>
-                        <asp:TextBox TextMode="password" ID="password" runat="server"></asp:TextBox>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <button runat="server" OnServerClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
-                    </td>
-                    <td>
-                        <button runat="server"><%= Translator.Translate("Register") %></button>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div id="register">
-            <h1>
-                REGISTER
-            </h1>
+            <div id="login-topper">
+                <h1 id="title">
+                    LOGIN
+                </h1>
+                <p id="subtitle">
+                    <asp:Label runat="server" ID="warning"></asp:Label>
+                </p>
+            </div>
+            <div id="login-content">
+                <label for="username">
+                    Username:
+                </label>
+                <asp:TextBox TextMode="SingleLine" ID="username" runat="server"></asp:TextBox>
+                <label for="password">
+                    Password:
+                </label>
+                <asp:TextBox TextMode="password" ID="password" runat="server"></asp:TextBox>
+                <button runat="server" OnServerClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>
+            </div>
         </div>
     </div>
 </asp:Content>
