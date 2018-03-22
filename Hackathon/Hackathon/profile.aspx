@@ -1,15 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="profile.aspx.cs" Inherits="profile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="profile.aspx.cs" Inherits="profile" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <link href="<%=Page.ResolveUrl("Style/dashboard.css") %>" rel="stylesheet" />
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+    <% var name = Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
+    <% var info = Sql.ScalarQuery("Select Info FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
+    <% var type = Sql.ScalarQuery("Select Type FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+        <div class="dashboard_header">
+                <% if (type.ToString() == "1") { %>
+                    <iframe
+                        id="maps_background"
+                      width="100%"
+                      height="450"
+                      frameborder="0"
+                      style="border:0"
+                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDJTDqMFi8a-LEz7liqy8AfeK6U-hiET_s&q=<%= name %>&amp;">
+                    </iframe>
+                    <% } else { %>
+                        <div id="dashboard_header_image">
+                            <img id="" src="<%= UserAccount.ProfilePicture() %>" />
+                        </div>
+                    <% } %>
+
+        <div class="dashboard_info">
+            <h1><%=name %></h1>
+            <p><%=info %></p>
         </div>
-    </form>
-</body>
-</html>
+        <% if (type.ToString() == "1"){ %>
+        <div class="dashboard_stats">
+            <h1>Stats Gemeente</h1>
+            
+        </div>
+            <%} %>
+    </div>
+</asp:Content>
+
