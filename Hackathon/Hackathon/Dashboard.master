@@ -7,13 +7,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
     <% var name = Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
+    <% var type = Sql.ScalarQuery("Select Type FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
     <div class="sidenav">
         <div class="top">
             <div class="avatar">
                 <img id="sidenavimg" src="<%=UserAccount.ProfilePicture() %>" />
             </div>
             <p class="user"><%=name %><br />
-                <span>Admin</span></p>
+                <span>
+                    <% if(type.ToString() == "0") { %>
+                        Bedrijf
+                    <%} else if (type.ToString() == "1") { %>
+                        Gemeente
+                    <%} else if(type.ToString() == "2") { %>
+                        Admin
+                    <%} %>
+                </span></p>
         </div>
         <ul>
             <li>
