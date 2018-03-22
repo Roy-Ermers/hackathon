@@ -354,9 +354,21 @@ padding-top: 30px;
 }
 
 .div2 h1 {
-font-family: Montserrat;
-font-size: 36px;
-font-weight: 800;
-text-align: center;
-margin-top: 20px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#UserContainer {
+    margin: 0;
+}
+
+#nav_photo {
+    width: 50px;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+    border-radius: 100%;
 }

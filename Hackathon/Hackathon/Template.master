@@ -28,17 +28,17 @@
                     </h1>
                 </a>
                 <ul id="navigator">
-                    <a href="Default.aspx">
+                    <a href="<%=Page.ResolveUrl("Default.aspx") %>">
                         <li>
                             HOME
                         </li>
                     </a>
-                    <a href="districts.aspx">
+                    <a href="<%=Page.ResolveUrl("districts.aspx") %>">
                         <li>
                             <%=Translator.Translate("Districts") %>
                         </li>
                     </a>
-                    <a href="">
+                    <a href="<%=Page.ResolveUrl("contact.aspx") %>">
                         <li>
                             CONTACT
                         </li>

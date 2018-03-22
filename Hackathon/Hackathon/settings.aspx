@@ -27,11 +27,11 @@
             <table class="settings">
                 <tr>
                     <td><label><%= Translator.Translate("companyname") %></label></td>
-                    <td><asp:TextBox ID="TbBedrijfsnaam" runat="server" OnTextChanged="TbBedrijfsnaam_TextChanged"></asp:TextBox></td>
+                    <td><asp:TextBox ID="TbBedrijfsnaam" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td><label><%= Translator.Translate("companyinfo") %></label></td>
-                    <td><asp:TextBox TextMode="multiline" Columns="50" Rows="5" ID="TbBedrijfsinfo" runat="server" OnTextChanged="TbBedrijfsinfo_TextChanged"></asp:TextBox></td>
+                    <td><asp:TextBox TextMode="multiline" Columns="50" Rows="5" ID="TbBedrijfsinfo" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td><label><%= Translator.Translate("companylogo") %></label></td>

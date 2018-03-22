@@ -36,5 +36,6 @@ public partial class dashboard : HackPage
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
         UserAccount.Logout();
+		Response.Redirect("/");
     }
 }
