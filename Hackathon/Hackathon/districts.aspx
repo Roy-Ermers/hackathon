@@ -14,40 +14,6 @@
     <section id="content">
         <div class="container">
             <div id="districts" runat="server">
-                            <%
-                var query = Sql.Query("SELECT Id, Name FROM [User] WHERE Type=1 ORDER BY Name ASC;");
-                while(query.Read()) {
-                    Response.Write(
-                        "<a href='/" + query.GetValue(1) + "'><div class='district'>" +
-                            "<div class='district-top'>" +
-                                "<img id='avatar' src='" + UserAccount.ProfilePicture((int)query.GetValue(0)) + "'>" + 
-                            "</div>" +
-                            "<div class='district-content'>" +
-                                "<h1 class='district-content-title'>" +
-                                    query.GetValue(1) +
-                                "</h1>" +
-                                "<div class='district-stats'>" +
-                                    "<table>" +
-                                        "<tr>" +
-                                            "<td>" +
-                                                "0" +
-                                            "</td>" +
-                                            "<td>" +
-                                                "<progress min='0' value='43' max='100'>" +
-                                                    "43" +
-                                                "</progress>" +
-                                            "</td>" +
-                                            "<td>" +
-                                                "100" +
-                                            "</td>" +
-                                        "</tr>" +
-                                    "</table>" +
-                                "</div>" +
-                            "</div>" +
-                        "</div></a>"
-                        );
-                }
-            %>
             </div>
     </section>
 </asp:Content>

@@ -16,7 +16,7 @@ public static class UserAccount
 		}
 	public static string ProfilePicture(int id)
 	{
-		string qry = Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + id.ToString() + ";").ToString();
+		string qry = Sql.ScalarQuery("SELECT Icon FROM [User] WHERE Id = " + id + ";").ToString();
 		if (string.IsNullOrEmpty(qry))
 			return standardPF;
 		return "data:image/png;base64, " + qry;

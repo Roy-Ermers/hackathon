@@ -19,7 +19,8 @@
     "NO_ACCESS": "Geen toegang.",
     "save": "Opslaan",
     "between": "tussen",
-    "AvgWage": "Gemiddeld inkomen"
+    "AvgWage": "Gemiddeld inkomen",
+    "Inhabs": "Inwoners"
   },
   "english": {
     "people": "people",
@@ -41,7 +42,8 @@
     "NO_ACCESS": "No access.",
     "save": "Save",
     "between": "between",
-    "AvgWage": "Average income"
+    "AvgWage": "Average income",
+    "Inhabs": "Citizens"
 
   }
 }

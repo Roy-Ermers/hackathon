@@ -12,6 +12,7 @@ public partial class Districts : HackPage
 	List<Filter> filters = new List<Filter>();
 	protected void Page_Load(object sender, EventArgs e)
 	{
+
 		foreach (string filter in StandardFilters)
 		{
 			var qry = Sql.Query("SELECT MIN(StatValue), MAX(StatValue) FROM Stat WHERE StatName = '" + filter + "'; ");
@@ -30,6 +31,7 @@ public partial class Districts : HackPage
 			TextBox minBox = new TextBox();
 			minBox.TextMode = TextBoxMode.Number;
 			minBox.Text = min.ToString();
+			minBox.AutoPostBack = true;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
 			tr2.Controls.Add(minCell);
@@ -37,6 +39,7 @@ public partial class Districts : HackPage
 			TableCell maxCell = new TableCell();
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
+			maxBox.AutoPostBack = true;
 			maxBox.Text = max.ToString();
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(minBox.Text));
 			maxCell.Controls.Add(maxBox);
@@ -45,57 +48,63 @@ public partial class Districts : HackPage
 			//add the generated rows
 			Filters.Controls.Add(tr);
 			Filters.Controls.Add(tr2);
-
-			List<int> districtIds = new List<int>();
-
-			foreach(Filter f in filters)
-			{
-				districtIds.AddRange(f.Execute());
-			}
-
-			int[] Districts = districtIds.Distinct().ToArray();
-
-			foreach(int i in Districts)
-			{
-				districts.InnerHtml += @"<div class='district'>" +
-							"<div class='district-top'>" +
-								"<img id='avatar' src='" + UserAccount.ProfilePicture((int)i) + "'>" +
-							"</div>" +
-							"<div class='district-content'>" +
-								"<h1 class='district-content-title'>" +
-									Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";") +
-								"</h1>" +
-								"<div class='district-stats'>" +
-									"<table>" +
-										"<tr>" +
-											"<td>" +
-												"0" +
-											"</td>" +
-											"<td>" +
-												"<progress min='0' value='43' max='100'>" +
-													"43" +
-												"</progress>" +
-											"</td>" +
-											"<td>" +
-												"100" +
-											"</td>" +
-										"</tr>" +
-									"</table>" +
-								"</div>" +
-							"</div>" +
-						"</div>";
-
-			}
 		}
-	}
 
+		Reprocess();
+	}
+	public void Reprocess()
+	{
+		List<int> districtIds = new List<int>();
+
+		foreach (Filter f in filters)
+		{
+			districtIds.AddRange(f.Execute());
+		}
+		int[] Districts = districtIds.GroupBy(x => x)
+					.Where(group => group.Count() > 1)
+					.Select(group => group.Key).ToArray();
+		districts.InnerHtml = "";
+		foreach (int i in Districts)
+		{
+			string FilterTable = "";
+			foreach (Filter f in filters)
+			{
+				FilterTable += $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
+					$"<tr>" +
+	 $"<td>{f.Min}</td>" +
+  $"<td>" +
+  $"<progress min='{f.Min}' max='{f.Max}' value='{Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'")}'></progress>" +
+  $"<td>{f.Max}</td>" +
+  $"</tr>";
+			}
+			districts.InnerHtml += @"<div class='district'>" +
+						"<div class='district-top'>" +
+							"<img id='avatar' src='" + UserAccount.ProfilePicture(i) + "'>" +
+						"</div>" +
+						"<div class='district-content'>" +
+							"<h1 class='district-content-title'>" +
+								Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";") +
+							"</h1>" +
+							"<div class='district-stats'>" +
+								"<table>" +
+								FilterTable +
+								"</table>" +
+							"</div>" +
+						"</div>" +
+					"</div>";
+
+		}
+
+	}
 	public void ChangeFilterMin(string name, long min)
 	{
 		filters.Find(x => x.Name == name).Min = min;
+		Reprocess();
 	}
 	public void ChangeFilterMax(string name, long max)
 	{
 		filters.Find(x => x.Name == name).Max = max;
+		Reprocess();
 	}
 }
 class Filter
@@ -141,15 +150,16 @@ class Filter
 	}
 	public int[] Execute()
 	{
-		var qry = Sql.Query("SELECT DistrictId FROM Stat WHERE StatName = '" + name + "' AND StatValue > " + min + " AND StatValue < " + max + ";");
-		int[] result = new int[qry.FieldCount];
+		var qry = Sql.Query("SELECT DistrictId FROM Stat WHERE StatName = '" + name + "' AND StatValue >= " + min + " AND StatValue <= " + max + ";");
+		List<int> result = new List<int>();
+
 		int index = 0;
 		while (qry.Read())
 		{
-			result[index] = qry.GetInt32(0);
+			result.Add(qry.GetInt32(0));
 			index++;
 		}
 
-		return result;
+		return result.ToArray();
 	}
 }
