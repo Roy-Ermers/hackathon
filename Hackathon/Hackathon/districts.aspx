@@ -1,43 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="districts.aspx.cs" Inherits="Districts" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
     <section id="sidebar">
         <ul>
             <li>
                 <table>
                     <tr>
                         <td colspan="3">
-                            <%=Translator.Translate("citizens") %>
+                            <%=Translator.Translate("Citizens") %>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            MIN
+                            <asp:TextBox ID="citizensMin" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>
-                            <input id="citizens" type="range" min="0" max="100" />
+                            <%=Translator.Translate("between") %>
+
                         </td>
                         <td>
-                            MAX
+                            <asp:TextBox ID="citizensMax" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            EVERAGE AGE
+                        <td colspan="3">EVERAGE AGE
                         </td>
                     </tr>
                     <tr rowspan="2">
-                        <td>
-                            MIN
+                        <td>MIN
                         </td>
                         <td>
                             <input id="averageAge" type="range" min="0" max="100" />
                         </td>
-                        <td>
-                            MAX
+                        <td>MAX
                         </td>
                     </tr>
                 </table>
@@ -46,17 +43,18 @@
     </section>
     <section id="content">
         <div class="container">
-            <%
-                var query = Sql.Query("SELECT * FROM [User] WHERE Type=1;");
+            <div id="districts">
+                            <%
+                var query = Sql.Query("SELECT Id, Name FROM [User] WHERE Type=1 ORDER BY Name ASC;");
                 while(query.Read()) {
                     Response.Write(
                         "<div class='district'>" +
                             "<div class='district-top'>" +
-
+                                "<img id='avatar' src='" + UserAccount.ProfilePicture((int)query.GetValue(0)) + "'>" + 
                             "</div>" +
                             "<div class='district-content'>" +
                                 "<h1 class='district-content-title'>" +
-                                    query.GetValue(2) +
+                                    query.GetValue(1) +
                                 "</h1>" +
                                 "<div class='district-stats'>" +
                                     "<table>" +
@@ -80,7 +78,7 @@
                         );
                 }
             %>
-        </div>
+            </div>
     </section>
 </asp:Content>
 

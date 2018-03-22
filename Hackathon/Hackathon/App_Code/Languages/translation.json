@@ -17,7 +17,8 @@
     "companyinfo": "Bedrijfs informatie",
     "companylogo": "Bedrijfs logo",
     "NO_ACCESS": "Geen toegang.",
-    "save": "Opslaan"
+    "save": "Opslaan",
+    "between": "tussen"
   },
   "english": {
     "people": "people",
@@ -26,7 +27,7 @@
     "Citizens": "Citzens",
     "Login": "Login",
     "Register": "Register",
-    "Intro": "HERE YOU CAN FIND THE BEST<br>DESTRICT FOR YOUR COMPANY.",
+    "Intro": "HERE YOU CAN FIND THE BEST<br>DISTRICT FOR YOUR COMPANY.",
     "FindDist": "FIND A DISTRICT",
     "Districts": "Districts",
     "dashboard": "Dashboard",
@@ -37,6 +38,7 @@
     "companyinfo": "Company Information",
     "companylogo": "Company logo",
     "NO_ACCESS": "No access.",
-    "save": "Save"
+    "save": "Save",
+    "between": "between"
   }
 }

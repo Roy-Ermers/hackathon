@@ -50,3 +50,4 @@ $("#averageAge").change(
         location.search = param.toString();
     }
 );
+

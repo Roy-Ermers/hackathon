@@ -39,7 +39,7 @@ margin: 0 auto;
 overflow: hidden;
 }
 
-input:not([type='submit']):not([type='range'])
+#login input:not([type='submit']):not([type='range'])
 {
 width: 300px;
 height: 25px;
@@ -174,7 +174,6 @@ margin-bottom: 20px;
 
 #login-topper {
 height: 100px;
-line-height: 100px;
 background: var(--ColorDarkblue);
 border-top: 1px solid var(--ColorDarkblue);
 border-top-right-radius: 5px;
@@ -183,7 +182,14 @@ text-align: center;
 }
 
 #login-topper #title {
+    line-height: 100px;
     font-weight: 500;
+    font-family: 'Montserat', sans-serif;
+    color: #fff;
+}
+
+#login-topper #subtitle {
+    font-weight: 250;
     font-family: 'Montserat', sans-serif;
     color: #fff;
 }
@@ -236,15 +242,29 @@ min-height: calc(100vh - var(--header-height));
 float: right;
 }
 
-.district {
-min-height: 250px;
-width: 300px;
-display: inline-block;
-margin-top: 25px;
-margin-right: 20px;
-cursor: pointer;
-perspective: 500px;
-text-align: center;
+#districts
+{
+ text-align: center;
+}
+
+.district { 
+    position: relative;
+    top: 0;
+    min-height: 250px;
+    width: 300px;
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    perspective: 500px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all ease-in-out 200ms;
+}
+
+.district:hover {
+top: -10px;
+z-index: 10;
 }
 
 .district-stats table
@@ -256,17 +276,19 @@ text-align: center;
 
 .district-top {
 height: 150px;
-background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../Images/topper.jpg') center no-repeat;
-background-size: 100%;
 }
 
-.district-content {
-background: #BDBBBD;
+.district-top #avatar
+{   
+    margin-top: 40px;
+    height: 50%;
 }
 
 .district-content-title
 {
 text-align: center;
+height: 30px;
+overflow: hidden;
 }
 
 .district-content-stats table
