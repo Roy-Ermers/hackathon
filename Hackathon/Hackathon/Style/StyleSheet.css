@@ -307,3 +307,15 @@ top: calc(100vh - 100px);
     text-align: center;
     margin-top: 20px;
 }
+
+#UserContainer {
+    margin: 0;
+}
+
+#nav_photo {
+    width: 50px;
+    position: relative;
+    top: 15px;
+    margin-right: 10px;
+    border-radius: 100%;
+}

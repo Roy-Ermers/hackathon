@@ -18,7 +18,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
 		} else
         {
             var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + Session["CurrentUser"]);
-            LinkButton link = new LinkButton() { Text = "Hello, " + name };
+            LinkButton link = new LinkButton() { Text = "<img id='nav_photo' src=' " + UserAccount.ProfilePicture() + " '>" + name };
+            link.Click += this.Dashboard;
             UserContainer.Controls.Add(link);
         }
 
@@ -27,7 +28,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	{
 		Response.Redirect("login.aspx");
 	}
-	public void Logout(object sender, EventArgs e)
+    protected void Dashboard(object sender, EventArgs e)
+    {
+        var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + Session["CurrentUser"]);
+        Response.Redirect(name + "/dashboard");
+    }
+    public void Logout(object sender, EventArgs e)
 	{
 		Sql.Procedure("Logout",new System.Data.SqlClient.SqlParameter("UserID",Session["UserID"]), new System.Data.SqlClient.SqlParameter("SessionKey",Session["SessionKey"]));
 	}
