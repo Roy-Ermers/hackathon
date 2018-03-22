@@ -43,18 +43,18 @@
     </section>
     <section id="content">
         <div class="container">
-            <%
-                var query = Sql.Query("SELECT * FROM [User] WHERE Type=1;");
-                while (query.Read())
-                {
+            <div id="districts">
+                            <%
+                var query = Sql.Query("SELECT Id, Name FROM [User] WHERE Type=1 ORDER BY Name ASC;");
+                while(query.Read()) {
                     Response.Write(
                         "<div class='district'>" +
                             "<div class='district-top'>" +
-
+                                "<img id='avatar' src='" + UserAccount.ProfilePicture((int)query.GetValue(0)) + "'>" + 
                             "</div>" +
                             "<div class='district-content'>" +
                                 "<h1 class='district-content-title'>" +
-                                    query.GetValue(2) +
+                                    query.GetValue(1) +
                                 "</h1>" +
                                 "<div class='district-stats'>" +
                                     "<table>" +
@@ -78,7 +78,7 @@
                         );
                 }
             %>
-        </div>
+            </div>
     </section>
 </asp:Content>
 
