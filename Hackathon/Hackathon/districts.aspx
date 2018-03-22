@@ -10,18 +10,16 @@
                 <table>
                     <tr>
                         <td colspan="3">
-                            <%=Translator.Translate("citizens") %>
+                            <%=Translator.Translate("Citizens") %>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            MIN
+                            <asp:TextBox ID="citizensMin" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>
-                            <input id="citizens" type="range" min="0" max="100" />
                         </td>
                         <td>
-                            MAX
                         </td>
                     </tr>
                     <tr>

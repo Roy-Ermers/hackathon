@@ -17,7 +17,8 @@
     "companyinfo": "Bedrijfs informatie",
     "companylogo": "Bedrijfs logo",
     "NO_ACCESS": "Geen toegang.",
-    "save": "Opslaan"
+    "save": "Opslaan",
+    "between": "tussen"
   },
   "english": {
     "people": "people",
@@ -37,6 +38,7 @@
     "companyinfo": "Company Information",
     "companylogo": "Company logo",
     "NO_ACCESS": "No access.",
-    "save": "Save"
+    "save": "Save",
+    "between": "between"
   }
 }
