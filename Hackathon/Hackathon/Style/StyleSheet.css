@@ -24,12 +24,12 @@ color: #000;
 }
 
 #loading {
-    position: fixed;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba(44,62,80, 0.5);
-    z-index: 9999;
+position: fixed;
+top: 0;
+height: 100vh;
+width: 100%;
+background: rgba(44,62,80, 0.5);
+z-index: 9999;
 }
 
 .container
@@ -39,22 +39,31 @@ margin: 0 auto;
 overflow: hidden;
 }
 
-header {
-    height: var(--header-height);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background: #2c3e50;
-    transition: all ease-in-out 250ms;
-    z-index: 999;
+input:not([type='submit']):not([type='range'])
+{
+width: 300px;
+height: 25px;
+background: #fff;
+border: 1px solid var(--ColorGray);
+padding-left: 5px;
 }
 
-    header #logo {
-        float: left;
-        font-weight: bold;
-        line-height: calc(var(--header-height) - 10px);
-        transition: all ease-in-out 250ms;
-    }
+header {
+height: var(--header-height);
+width: 100%;
+position: fixed;
+top: 0;
+background: #2c3e50;
+transition: all ease-in-out 250ms;
+z-index: 999;
+}
+
+header #logo {
+float: left;
+font-weight: bold;
+line-height: calc(var(--header-height) - 10px);
+transition: all ease-in-out 250ms;
+}
 
 header #logo #white {
 color: #fff;
@@ -66,15 +75,22 @@ color: #e74c3c;
 border-bottom: 3px solid #fff;
 }
 
-    header #navigator {
-        float: right;
-        line-height: var(--header-height);
-        transition: all ease-in-out 250ms;
-    }
+header #navigator {
+float: right;
+line-height: var(--header-height);
+transition: all ease-in-out 250ms;
+}
 
-header #navigator li, header #navigator a {
+header #navigator li
+{
 display: inline-block;
 margin-left: 20px;
+font-size: 18px;
+color: #fff;
+text-transform: uppercase;
+}
+
+header #navigator li a {
 font-size: 18px;
 color: #fff;
 text-transform: uppercase;
@@ -146,34 +162,62 @@ background: #c0392b;
 border-color: #c0392b;
 }
 
-#login
-{
-width: fit-content;
+#login {
+width: 500px;
 margin: 0 auto;
-margin-top: 100px;
+margin-top: 120px;
+text-align: center;
+border-radius: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+margin-bottom: 20px;
 }
 
-#login table
+#login-topper {
+height: 100px;
+line-height: 100px;
+background: var(--ColorDarkblue);
+border-top: 1px solid var(--ColorDarkblue);
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+text-align: center;
+}
+
+#login-topper #title {
+    font-weight: 500;
+    font-family: 'Montserat', sans-serif;
+    color: #fff;
+}
+
+#login-content {
+background: #fff;
+border-top: 1px solid #fff;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+
+#login-content input
 {
-border: 1px solid black;
-padding: 20px 40px;
+margin-bottom: 10px;
 }
 
-#login button {
+#login-content button
+{
 padding: 5px 20px;
-color: #fff;
-font-size: 16px;
 background: var(--ColorBlue);
 border: 1px solid var(--ColorBlue);
-margin-top: 40px;
+color: #fff;
+font-weight: 300;
+font-family: 'Roboto', sans-serif;
+margin-top: 10px;
+margin-bottom: 20px;
 cursor: pointer;
 transition: all ease-in-out 250ms;
-float: right;
 }
 
-#login button:hover {
+#login-content button:hover
+{
+background: var(--ColorDarkblue);
 border-color: var(--ColorDarkblue);
-background var(--ColorDarkblue);
 }
 
 #sidebar {
@@ -251,62 +295,62 @@ top: calc(100vh - 100px);
 }
 
 #orange_div {
-    background-color: #e74c3c;
+background-color: #e74c3c;
 }
 
 #orange_div h1 {
-    text-align: center;
-    color: #fff;
-    font-family: Montserrat;
-    font-weight: 800;
-    font-size: 45px;
-    padding-top: 50px;
+text-align: center;
+color: #fff;
+font-family: Montserrat;
+font-weight: 800;
+font-size: 45px;
+padding-top: 50px;
 }
 
 .div4 {
-    width: 90%;
-    margin: 0 auto;
-    min-height: 150px;
+width: 90%;
+margin: 0 auto;
+min-height: 150px;
 }
 
 .div1 {
-    width: 20%;
-    margin-left: 5%;
-    float:left;
+width: 20%;
+margin-left: 5%;
+float:left;
 }
 
 .partner_logo {
-    width: 100%;
+width: 100%;
 }
 
 #underline_partners {
-    width: 100px;
-    margin: 0 auto;
-    display: block;
-    margin-bottom: 50px;
-    height: 2px;
-    border: none;
-    background-color: #fff;
-    border-radius: 1px;
+width: 100px;
+margin: 0 auto;
+display: block;
+margin-bottom: 50px;
+height: 2px;
+border: none;
+background-color: #fff;
+border-radius: 1px;
 }
 
 .white_div {
-    background-color: #fff;
-    min-height: 200px;
+background-color: #fff;
+min-height: 200px;
 }
 
 .div2 {
-    width: 50%;
-    float: left;
+width: 50%;
+float: left;
 }
 
 .side_photo {
-    width: 50vw;
+width: 50vw;
 }
 
 .div2 p {
-    padding: 50px;
-    padding-top: 30px;
+padding: 50px;
+padding-top: 30px;
 }
 
 .div2 h1 {

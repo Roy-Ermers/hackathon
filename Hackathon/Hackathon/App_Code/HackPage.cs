@@ -12,8 +12,10 @@ public class HackPage : System.Web.UI.Page
 	public HackPage()
 	{
 #pragma warning disable CS0618 // Type or member is obsolete
-		RegisterStartupScript("PostBackFix",
-  "<script>document.forms[0].action='';</script>");
+		RegisterStartupScript("postbackfix", @"<script>for (i = 0; i < document.forms.length; i++) {
+								document.forms[i].action = '';
+							}</script>");
 #pragma warning restore CS0618 // Type or member is obsolete
+
 	}
 }

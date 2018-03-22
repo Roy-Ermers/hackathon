@@ -8,6 +8,13 @@ using System.Web.UI.WebControls;
 public partial class MasterPage : System.Web.UI.MasterPage
 {
 	public Language CurrentLanguage = Language.English;
+	protected override void OnPreRender(EventArgs e)
+	{
+		base.OnPreRender(e);
+		Response.Write(@"<script>for (i = 0; i < document.forms.length; i++) {
+								document.forms[i].action = '';
+							}</script>");
+	}
 	protected void Page_Load(object sender, EventArgs e)
 	{
 		if (Session["CurrentUser"] == null)
@@ -40,12 +47,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 	protected void ChangeLanguageNL(object sender, EventArgs e)
 	{
 		Response.SetCookie(new HttpCookie("language", "dutch"));
-        Response.Redirect(Request.Url.ToString());
+		Response.Redirect(Request.RawUrl);
 	}
 
     protected void ChangeLanguageEN(object sender, EventArgs e)
     {
         Response.SetCookie(new HttpCookie("language", "english"));
-        Response.Redirect(Request.Url.ToString());
+		Response.Redirect(Request.RawUrl);
     }
 }
