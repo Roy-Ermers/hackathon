@@ -1,0 +1,39 @@
+﻿<%@ Master MasterPageFile="~/Template.master" Language="C#" AutoEventWireup="true" CodeFile="Dashboard.master.cs" Inherits="Dashboard" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <link href="<%=Page.ResolveUrl("Style/dashboard.css") %>" rel="stylesheet" />
+        <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
+    <% var name = Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
+    <div class="sidenav">
+        <div class="top">
+            <div class="avatar">
+                <img id="sidenavimg" src="<%=UserAccount.ProfilePicture() %>" />
+            </div>
+            <p class="user"><%=name %><br />
+                <span>Admin</span></p>
+        </div>
+        <ul>
+            <li>
+                <a href="<%=Page.ResolveUrl(name + "/dashboard") %>"><%= Translator.Translate("dashboard") %></a>
+            </li>
+            <li>
+                <a href="<%=Page.ResolveUrl(name + "/dashboard/settings") %>"><%= Translator.Translate("settings") %></a>
+            </li>
+            <li>
+                <a href="<%=Page.ResolveUrl(name + "/dashboard/stats") %>">Stats</a>
+            </li>
+            <li>
+                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
+            </li>
+            <asp:ContentPlaceHolder ID="navbar" runat="server">
+            </asp:ContentPlaceHolder>
+        </ul>
+    </div>
+
+    <asp:ContentPlaceHolder ID="body" runat="server">
+    </asp:ContentPlaceHolder>
+
+</asp:Content>

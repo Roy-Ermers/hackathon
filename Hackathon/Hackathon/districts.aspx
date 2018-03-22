@@ -18,7 +18,7 @@
                 var query = Sql.Query("SELECT Id, Name FROM [User] WHERE Type=1 ORDER BY Name ASC;");
                 while(query.Read()) {
                     Response.Write(
-                        "<div class='district'>" +
+                        "<a href='/" + query.GetValue(1) + "'><div class='district'>" +
                             "<div class='district-top'>" +
                                 "<img id='avatar' src='" + UserAccount.ProfilePicture((int)query.GetValue(0)) + "'>" + 
                             "</div>" +
@@ -44,7 +44,7 @@
                                     "</table>" +
                                 "</div>" +
                             "</div>" +
-                        "</div>"
+                        "</div></a>"
                         );
                 }
             %>

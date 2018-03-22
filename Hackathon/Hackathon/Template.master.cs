@@ -25,7 +25,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
 		} else
         {
             var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + Session["CurrentUser"]);
-            LinkButton link = new LinkButton() { Text = "<img id='nav_photo' src=' " + UserAccount.ProfilePicture() + " '>" + name };
+            LinkButton link = new LinkButton() { Text = "<div id='avatar'><img id='nav_photo' src=' " + UserAccount.ProfilePicture() + " '></div>" + name };
             link.Click += this.Dashboard;
             UserContainer.Controls.Add(link);
         }

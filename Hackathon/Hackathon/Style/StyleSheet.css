@@ -110,13 +110,31 @@ header #languages li
 display: inline-block;
 }
 
-header #languages li img 
+header #navigator #avatar {
+float: left;
+width: 50px;
+height: 50px;
+background: #fff;
+margin-right: 10px;
+margin-top: calc(var(--header-height) / 5);
+border-radius: 50%;
+transition: all ease-in-out 250ms;
+}
+
+header #navigator #avatar img {
+float: left;
+max-width: 100%;
+max-height: 100%;
+border-radius: 50%;
+}
+
+header #languages li img
 {
 float: left;
 width: 30px;
 height: 20px;
-margin-right: 10px;
-
+margin: 0 auto;
+margin-right: 20px;
 }
 
 main
@@ -182,16 +200,16 @@ text-align: center;
 }
 
 #login-topper #title {
-    line-height: 100px;
-    font-weight: 500;
-    font-family: 'Montserat', sans-serif;
-    color: #fff;
+line-height: 100px;
+font-weight: 500;
+font-family: 'Montserat', sans-serif;
+color: #fff;
 }
 
 #login-topper #subtitle {
-    font-weight: 250;
-    font-family: 'Montserat', sans-serif;
-    color: #fff;
+font-weight: 250;
+font-family: 'Montserat', sans-serif;
+color: #fff;
 }
 
 #login-content {
@@ -244,22 +262,22 @@ float: right;
 
 #districts
 {
- text-align: center;
+text-align: center;
 }
 
 .district { 
-    position: relative;
-    top: 0;
-    min-height: 250px;
-    width: 300px;
-    display: inline-block;
-    margin-top: 25px;
-    margin-right: 20px;
-    cursor: pointer;
-    perspective: 500px;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: all ease-in-out 200ms;
+position: relative;
+top: 0;
+min-height: 250px;
+width: 300px;
+display: inline-block;
+margin-top: 25px;
+margin-right: 20px;
+cursor: pointer;
+perspective: 500px;
+text-align: center;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transition: all ease-in-out 200ms;
 }
 
 .district:hover {
@@ -280,8 +298,8 @@ height: 150px;
 
 .district-top #avatar
 {   
-    margin-top: 40px;
-    height: 50%;
+margin-top: 40px;
+height: 50%;
 }
 
 .district-content-title
@@ -376,21 +394,13 @@ padding-top: 30px;
 }
 
 .div2 h1 {
-    font-family: Montserrat;
-    font-size: 36px;
-    font-weight: 800;
-    text-align: center;
-    margin-top: 20px;
+font-family: Montserrat;
+font-size: 36px;
+font-weight: 800;
+text-align: center;
+margin-top: 20px;
 }
 
 #UserContainer {
-    margin: 0;
-}
-
-#nav_photo {
-    width: 50px;
-    position: relative;
-    top: 15px;
-    margin-right: 10px;
-    border-radius: 100%;
+margin: 0;
 }

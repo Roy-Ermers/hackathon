@@ -16,26 +16,19 @@ public partial class dashboard : HackPage
 
 
 	}
-	bool HasAccess(int DesiredUserID)
-	{
-		if (Context.Session["CurrentUser"] == null || Context.Session["SessionKey"] == null)
-			return false;
-		int CurrentUserID = int.Parse(Context.Session["CurrentUser"].ToString());
-		string SessionKey = Context.Session["SessionKey"].ToString();
-		if (DesiredUserID != CurrentUserID)
-			return false;
-		//check if the user is logged in
-
-		//then check if the user is legit
-		var query = Sql.ScalarQuery("SELECT UserId FROM SessionKey WHERE UserId = " + CurrentUserID + " AND SessionKey = '" + SessionKey + "';");
-
-		return query != null;
-	}
-
-
-    protected void LinkButton1_Click(object sender, EventArgs e)
+    bool HasAccess(int DesiredUserID)
     {
-        UserAccount.Logout();
-		Response.Redirect("/");
+        if (Context.Session["CurrentUser"] == null || Context.Session["SessionKey"] == null)
+            return false;
+        int CurrentUserID = int.Parse(Context.Session["CurrentUser"].ToString());
+        string SessionKey = Context.Session["SessionKey"].ToString();
+        if (DesiredUserID != CurrentUserID)
+            return false;
+        //check if the user is logged in
+
+        //then check if the user is legit
+        var query = Sql.ScalarQuery("SELECT UserId FROM SessionKey WHERE UserId = " + CurrentUserID + " AND SessionKey = '" + SessionKey + "';");
+
+        return query != null;
     }
 }
