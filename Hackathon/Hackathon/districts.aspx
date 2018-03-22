@@ -8,6 +8,7 @@
             <li>
                 <asp:Table runat="server" id="Filters">
                 </asp:Table>
+                <asp:Button runat="server" OnClick="Unnamed1_Click" Text="Search" />
             </li>
         </ul>
     </section>

@@ -12,7 +12,6 @@ public partial class Districts : HackPage
 	List<Filter> filters = new List<Filter>();
 	protected void Page_Load(object sender, EventArgs e)
 	{
-
 		foreach (string filter in StandardFilters)
 		{
 			var qry = Sql.Query("SELECT MIN(StatValue), MAX(StatValue) FROM Stat WHERE StatName = '" + filter + "'; ");
@@ -30,7 +29,6 @@ public partial class Districts : HackPage
 			TableCell minCell = new TableCell();
 			TextBox minBox = new TextBox();
 			minBox.TextMode = TextBoxMode.Number;
-			minBox.AutoPostBack = true;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
 			tr2.Controls.Add(minCell);
@@ -38,16 +36,18 @@ public partial class Districts : HackPage
 			TableCell maxCell = new TableCell();
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
-			maxBox.AutoPostBack = true;
-			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(minBox.Text));
+			maxBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(maxBox.Text));
 			maxCell.Controls.Add(maxBox);
 			tr2.Controls.Add(maxCell);
 
 			//add the generated rows
 			Filters.Controls.Add(tr);
 			Filters.Controls.Add(tr2);
-			Reprocess();
 		}
+	}
+	protected void Unnamed1_Click(object sender, EventArgs e)
+	{
+		Reprocess();
 	}
 	public void Reprocess()
 	{
