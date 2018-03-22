@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="districts.aspx.cs" Inherits="Districts" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"/>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="body" runat="Server">
     <section id="sidebar">
         <ul>
             <li>
@@ -19,24 +17,24 @@
                             <asp:TextBox ID="citizensMin" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                         <td>
+                            <%=Translator.Translate("between") %>
+
                         </td>
                         <td>
+                            <asp:TextBox ID="citizensMax" runat="server" TextMode="Number"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3">
-                            EVERAGE AGE
+                        <td colspan="3">EVERAGE AGE
                         </td>
                     </tr>
                     <tr rowspan="2">
-                        <td>
-                            MIN
+                        <td>MIN
                         </td>
                         <td>
                             <input id="averageAge" type="range" min="0" max="100" />
                         </td>
-                        <td>
-                            MAX
+                        <td>MAX
                         </td>
                     </tr>
                 </table>
