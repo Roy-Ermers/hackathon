@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class Districts : HackPage
 {
-	public string[] StandardFilters = new string[] { "AvgWage", "Inhabs" };
+	public string[] StandardFilters = new string[] { "AvgWage", "Inhabs", "Households" };
 
 	List<Filter> filters = new List<Filter>();
 	protected void Page_Load(object sender, EventArgs e)
@@ -28,6 +28,7 @@ public partial class Districts : HackPage
 			//minimal number
 			TableCell minCell = new TableCell();
 			TextBox minBox = new TextBox();
+			minBox.Text = filters.Find(x => x.Name == filter).Min.ToString();
 			minBox.TextMode = TextBoxMode.Number;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
@@ -36,6 +37,7 @@ public partial class Districts : HackPage
 			TableCell maxCell = new TableCell();
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
+			maxBox.Text = filters.Find(x => x.Name == filter).Max.ToString();
 			maxBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(maxBox.Text));
 			maxCell.Controls.Add(maxBox);
 			tr2.Controls.Add(maxCell);
@@ -58,7 +60,7 @@ public partial class Districts : HackPage
 			districtIds.AddRange(f.Execute());
 		}
 		int[] Districts = districtIds.GroupBy(x => x)
-					.Where(group => group.Count() > 1)
+					.Where(group => group.Count() == filters.Count)
 					.Select(group => group.Key).ToArray();
 
 		districts.InnerHtml = "";
@@ -67,13 +69,13 @@ public partial class Districts : HackPage
 			string FilterTable = "";
 			foreach (Filter f in filters)
 			{
+				var value = Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'");
 				FilterTable += $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
-					$"<tr>" +
-	 $"<td>{f.Min}</td>" +
-  $"<td>" +
-  $"<progress min='{f.Min}' max='{f.Max}' value='{Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'")}'></progress>" +
-  $"<td>{f.Max}</td>" +
-  $"</tr>";
+						$"<tr>" +
+	  $"<td>" +
+	  $"<progress min='{f.Min}' max='{f.Max}' value='{value}'></progress><p>{value}</p>" +
+	  $"</td>" +
+	  $"</tr>";
 			}
 			districts.InnerHtml += @"<div class='district'>" +
 						"<div class='district-top'>" +
