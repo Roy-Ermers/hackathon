@@ -10,7 +10,7 @@
                 <table>
                     <tr>
                         <td colspan="3">
-                            CITIZENS
+                            <%=Translator.Translate("citizens") %>
                         </td>
                     </tr>
                     <tr>
