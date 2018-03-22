@@ -22,7 +22,9 @@ public partial class Districts : HackPage
 			filters.Add(new Filter(filter, min, max));
 
 			TableRow tr = new TableRow();
-			tr.Controls.Add(new TableCell() { Text = Translator.Translate(filter), ColumnSpan = 3 });
+			tr.Controls.Add(new TableCell() { Text = Translator.Translate(filter), ColumnSpan = 2 });
+			//add the generated rows
+			Filters.Controls.Add(tr);
 
 			//minimal number
 			TableRow minCell = new TableRow();
@@ -45,8 +47,6 @@ public partial class Districts : HackPage
 			tc.Controls.Add(maxBox);
 			Filters.Controls.Add(maxCell);
 
-			//add the generated rows
-			Filters.Controls.Add(tr);
 		}
 	}
 	protected void Unnamed1_Click(object sender, EventArgs e)

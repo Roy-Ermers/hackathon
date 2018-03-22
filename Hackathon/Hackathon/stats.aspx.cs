@@ -14,12 +14,20 @@ public partial class Stats : HackPage
 
 		var query = Sql.Query("SELECT StatName, StatValue FROM Stat WHERE DistrictId = " + Request.QueryString["UserID"] + ";");
 
-
-		while (query.Read())
+		if (query.HasRows)
+		{
+			while (query.Read())
+			{
+				TableRow tr = new TableRow();
+					tr.Controls.Add(new TableCell() { Text = Translator.Translate(query.GetValue(0).ToString()) });
+					tr.Controls.Add(new TableCell() { Text = query.GetValue(1).ToString() });
+				stats_table.Controls.Add(tr);
+			}
+		}
+		else
 		{
 			TableRow tr = new TableRow();
-			for (int i = 0; i < query.FieldCount; i++)
-				tr.Controls.Add(new TableCell() { Text = query.GetValue(i).ToString() });
+			tr.Controls.Add(new TableCell() { Text = Translator.Translate("NO_DATA") });
 			stats_table.Controls.Add(tr);
 		}
 
