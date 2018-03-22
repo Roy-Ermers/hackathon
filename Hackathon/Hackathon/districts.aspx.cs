@@ -30,7 +30,6 @@ public partial class Districts : HackPage
 			TableCell minCell = new TableCell();
 			TextBox minBox = new TextBox();
 			minBox.TextMode = TextBoxMode.Number;
-			minBox.Text = min.ToString();
 			minBox.AutoPostBack = true;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
@@ -40,7 +39,6 @@ public partial class Districts : HackPage
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
 			maxBox.AutoPostBack = true;
-			maxBox.Text = max.ToString();
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(minBox.Text));
 			maxCell.Controls.Add(maxBox);
 			tr2.Controls.Add(maxCell);
@@ -48,9 +46,8 @@ public partial class Districts : HackPage
 			//add the generated rows
 			Filters.Controls.Add(tr);
 			Filters.Controls.Add(tr2);
+			Reprocess();
 		}
-
-		Reprocess();
 	}
 	public void Reprocess()
 	{
@@ -63,6 +60,7 @@ public partial class Districts : HackPage
 		int[] Districts = districtIds.GroupBy(x => x)
 					.Where(group => group.Count() > 1)
 					.Select(group => group.Key).ToArray();
+
 		districts.InnerHtml = "";
 		foreach (int i in Districts)
 		{
@@ -99,12 +97,10 @@ public partial class Districts : HackPage
 	public void ChangeFilterMin(string name, long min)
 	{
 		filters.Find(x => x.Name == name).Min = min;
-		Reprocess();
 	}
 	public void ChangeFilterMax(string name, long max)
 	{
 		filters.Find(x => x.Name == name).Max = max;
-		Reprocess();
 	}
 }
 class Filter
@@ -152,12 +148,9 @@ class Filter
 	{
 		var qry = Sql.Query("SELECT DistrictId FROM Stat WHERE StatName = '" + name + "' AND StatValue >= " + min + " AND StatValue <= " + max + ";");
 		List<int> result = new List<int>();
-
-		int index = 0;
 		while (qry.Read())
 		{
 			result.Add(qry.GetInt32(0));
-			index++;
 		}
 
 		return result.ToArray();
