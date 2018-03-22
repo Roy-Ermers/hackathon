@@ -24,27 +24,29 @@ public partial class Districts : HackPage
 			TableRow tr = new TableRow();
 			tr.Controls.Add(new TableCell() { Text = Translator.Translate(filter), ColumnSpan = 3 });
 
-			TableRow tr2 = new TableRow();
 			//minimal number
-			TableCell minCell = new TableCell();
+			TableRow minCell = new TableRow();
+			TableCell tc = new TableCell();
+			minCell.Controls.Add(tc);
 			TextBox minBox = new TextBox();
 			minBox.Text = filters.Find(x => x.Name == filter).Min.ToString();
 			minBox.TextMode = TextBoxMode.Number;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
-			minCell.Controls.Add(minBox);
-			tr2.Controls.Add(minCell);
+			tc.Controls.Add(minBox);
+			Filters.Controls.Add(minCell);
 			//maximal number
-			TableCell maxCell = new TableCell();
+			TableRow maxCell = new TableRow();
+			tc = new TableCell();
+			maxCell.Controls.Add(tc);
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
 			maxBox.Text = filters.Find(x => x.Name == filter).Max.ToString();
 			maxBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(maxBox.Text));
-			maxCell.Controls.Add(maxBox);
-			tr2.Controls.Add(maxCell);
+			tc.Controls.Add(maxBox);
+			Filters.Controls.Add(maxCell);
 
 			//add the generated rows
 			Filters.Controls.Add(tr);
-			Filters.Controls.Add(tr2);
 		}
 	}
 	protected void Unnamed1_Click(object sender, EventArgs e)

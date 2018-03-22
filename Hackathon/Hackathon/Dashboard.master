@@ -23,7 +23,7 @@
                 <a href="<%=Page.ResolveUrl(name + "/dashboard/settings") %>"><%= Translator.Translate("settings") %></a>
             </li>
             <li>
-                <a href="<%=Page.ResolveUrl(name + "/dashboard/stats") %>">Stats</a>
+                <a href="<%=Page.ResolveUrl(name + "/dashboard/stats") %>"><%= Translator.Translate("stats") %></a>
             </li>
             <li>
                 <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
