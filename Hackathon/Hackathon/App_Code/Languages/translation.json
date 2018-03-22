@@ -20,7 +20,8 @@
     "save": "Opslaan",
     "between": "tussen",
     "AvgWage": "Gemiddeld inkomen",
-    "Inhabs": "Inwoners"
+    "Inhabs": "Inwoners",
+    "Households": "Huishoudens"
   },
   "english": {
     "people": "people",
@@ -43,7 +44,7 @@
     "save": "Save",
     "between": "between",
     "AvgWage": "Average income",
-    "Inhabs": "Citizens"
-
+    "Inhabs": "Citizens",
+    "Households": "Householdings"
   }
 }
