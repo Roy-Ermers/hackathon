@@ -7,12 +7,11 @@ using System.Web.UI.WebControls;
 
 public partial class Districts : HackPage
 {
-	public string[] StandardFilters = new string[] { "AvgWage", "Inhabs" };
+	public string[] StandardFilters = new string[] { "AvgWage", "Inhabs", "Households" };
 
 	List<Filter> filters = new List<Filter>();
 	protected void Page_Load(object sender, EventArgs e)
 	{
-
 		foreach (string filter in StandardFilters)
 		{
 			var qry = Sql.Query("SELECT MIN(StatValue), MAX(StatValue) FROM Stat WHERE StatName = '" + filter + "'; ");
@@ -29,9 +28,8 @@ public partial class Districts : HackPage
 			//minimal number
 			TableCell minCell = new TableCell();
 			TextBox minBox = new TextBox();
+			minBox.Text = filters.Find(x => x.Name == filter).Min.ToString();
 			minBox.TextMode = TextBoxMode.Number;
-			minBox.Text = min.ToString();
-			minBox.AutoPostBack = true;
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
 			tr2.Controls.Add(minCell);
@@ -39,9 +37,8 @@ public partial class Districts : HackPage
 			TableCell maxCell = new TableCell();
 			TextBox maxBox = new TextBox();
 			maxBox.TextMode = TextBoxMode.Number;
-			maxBox.AutoPostBack = true;
-			maxBox.Text = max.ToString();
-			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(minBox.Text));
+			maxBox.Text = filters.Find(x => x.Name == filter).Max.ToString();
+			maxBox.TextChanged += (object s, EventArgs a) => ChangeFilterMax(filter, long.Parse(maxBox.Text));
 			maxCell.Controls.Add(maxBox);
 			tr2.Controls.Add(maxCell);
 
@@ -49,7 +46,9 @@ public partial class Districts : HackPage
 			Filters.Controls.Add(tr);
 			Filters.Controls.Add(tr2);
 		}
-
+	}
+	protected void Unnamed1_Click(object sender, EventArgs e)
+	{
 		Reprocess();
 	}
 	public void Reprocess()
@@ -61,21 +60,22 @@ public partial class Districts : HackPage
 			districtIds.AddRange(f.Execute());
 		}
 		int[] Districts = districtIds.GroupBy(x => x)
-					.Where(group => group.Count() > 1)
+					.Where(group => group.Count() == filters.Count)
 					.Select(group => group.Key).ToArray();
+
 		districts.InnerHtml = "";
 		foreach (int i in Districts)
 		{
 			string FilterTable = "";
 			foreach (Filter f in filters)
 			{
+				var value = Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'");
 				FilterTable += $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
-					$"<tr>" +
-	 $"<td>{f.Min}</td>" +
-  $"<td>" +
-  $"<progress min='{f.Min}' max='{f.Max}' value='{Sql.ScalarQuery($"SELECT StatValue FROM Stat WHERE DistrictId = {i} AND StatName = '{f.Name}'")}'></progress>" +
-  $"<td>{f.Max}</td>" +
-  $"</tr>";
+						$"<tr>" +
+	  $"<td>" +
+	  $"<progress min='{f.Min}' max='{f.Max}' value='{value}'></progress><p>{value}</p>" +
+	  $"</td>" +
+	  $"</tr>";
 			}
 			districts.InnerHtml += @"<div class='district'>" +
 						"<div class='district-top'>" +
@@ -99,12 +99,10 @@ public partial class Districts : HackPage
 	public void ChangeFilterMin(string name, long min)
 	{
 		filters.Find(x => x.Name == name).Min = min;
-		Reprocess();
 	}
 	public void ChangeFilterMax(string name, long max)
 	{
 		filters.Find(x => x.Name == name).Max = max;
-		Reprocess();
 	}
 }
 class Filter
@@ -152,12 +150,9 @@ class Filter
 	{
 		var qry = Sql.Query("SELECT DistrictId FROM Stat WHERE StatName = '" + name + "' AND StatValue >= " + min + " AND StatValue <= " + max + ";");
 		List<int> result = new List<int>();
-
-		int index = 0;
 		while (qry.Read())
 		{
 			result.Add(qry.GetInt32(0));
-			index++;
 		}
 
 		return result.ToArray();
