@@ -170,3 +170,7 @@ input[type=file] {
 .settings tr {
     margin-left: 100px;
 }
+
+iframe {
+    pointer-events: none;
+}
