@@ -260,7 +260,7 @@ min-height: calc(100vh - var(--header-height));
 float: right;
 }
 
-#districts
+#body_districts
 {
 text-align: center;
 }
@@ -273,6 +273,7 @@ width: 300px;
 display: inline-block;
 margin-top: 25px;
 margin-right: 20px;
+margin-bottom: 25px;
 cursor: pointer;
 perspective: 500px;
 text-align: center;

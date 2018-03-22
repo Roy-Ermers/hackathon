@@ -13,7 +13,7 @@
     </section>
     <section id="content">
         <div class="container">
-            <div id="districts" runat="server">
+            <div clientid="districts" id="districts" runat="server">
             </div>
     </section>
 </asp:Content>
