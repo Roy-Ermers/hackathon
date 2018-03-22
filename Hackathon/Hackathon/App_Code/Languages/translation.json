@@ -18,7 +18,8 @@
     "companylogo": "Bedrijfs logo",
     "NO_ACCESS": "Geen toegang.",
     "save": "Opslaan",
-    "between": "tussen"
+    "between": "tussen",
+    "AvgWage": "Gemiddeld inkomen"
   },
   "english": {
     "people": "people",
@@ -39,6 +40,8 @@
     "companylogo": "Company logo",
     "NO_ACCESS": "No access.",
     "save": "Save",
-    "between": "between"
+    "between": "between",
+    "AvgWage": "Average income"
+
   }
 }

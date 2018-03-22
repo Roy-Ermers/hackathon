@@ -6,44 +6,14 @@
     <section id="sidebar">
         <ul>
             <li>
-                <table>
-                    <tr>
-                        <td colspan="3">
-                            <%=Translator.Translate("Citizens") %>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:TextBox ID="citizensMin" runat="server" TextMode="Number"></asp:TextBox>
-                        </td>
-                        <td>
-                            <%=Translator.Translate("between") %>
-
-                        </td>
-                        <td>
-                            <asp:TextBox ID="citizensMax" runat="server" TextMode="Number"></asp:TextBox>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">EVERAGE AGE
-                        </td>
-                    </tr>
-                    <tr rowspan="2">
-                        <td>MIN
-                        </td>
-                        <td>
-                            <input id="averageAge" type="range" min="0" max="100" />
-                        </td>
-                        <td>MAX
-                        </td>
-                    </tr>
-                </table>
+                <asp:Table runat="server" id="Filters">
+                </asp:Table>
             </li>
         </ul>
     </section>
     <section id="content">
         <div class="container">
-            <div id="districts">
+            <div id="districts" runat="server">
                             <%
                 var query = Sql.Query("SELECT Id, Name FROM [User] WHERE Type=1 ORDER BY Name ASC;");
                 while(query.Read()) {
