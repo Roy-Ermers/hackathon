@@ -22,5 +22,36 @@
                 </h1>
             </div>
         </div>
+        <div id="orange_div">
+            <h1>Partners</h1>
+            <hr id="underline_partners"/>
+            <div class="div4">
+                <div class="div1">
+                    <img class="partner_logo" src="<%=Page.ResolveUrl("Images/ing.png") %>"/>
+                </div>                <div class="div1">
+
+                    <img class="partner_logo" src="<%=Page.ResolveUrl("Images/bijenkorf.png") %>"/>
+                </div>
+                <div class="div1">
+                    <img class="partner_logo" src="<%=Page.ResolveUrl("Images/philips.png") %>"/>
+                </div>
+                <div class="div1">
+                    <img class="partner_logo" src="<%=Page.ResolveUrl("Images/bandicam.png") %>"/>
+                </div>
+            </div>
+        </div>
+        <div class="white_div">
+            <div class="div2">
+                <img class="side_photo" src="<%=Page.ResolveUrl("Images/topper.jpg") %>"/>
+            </div>
+            <div class="div2">
+                <h1>
+                    Over brabant
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                </p>
+            </div>
+        </div>
        </asp:Content>
 

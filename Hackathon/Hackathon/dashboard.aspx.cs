@@ -14,6 +14,7 @@ public partial class dashboard : System.Web.UI.Page
 		if (!HasAccess((int)UserId.GetValue(0)))
 			Response.Redirect($"/login.aspx?error=NO_ACCESS");
 
+
 	}
 	bool HasAccess(int DesiredUserID)
 	{
@@ -31,4 +32,9 @@ public partial class dashboard : System.Web.UI.Page
 		return query != null;
 	}
 
+
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        UserAccount.Logout();
+    }
 }

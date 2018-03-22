@@ -115,8 +115,8 @@ padding: 10px 30px;
 color: #fff;
 font-weight: bold;
 font-size: 16px;
+border: none;
 background: #e74c3c;
-border: 1px solid red;
 margin-top: 40px;
 cursor: pointer;
 transition: all ease-in-out 250ms;
@@ -239,4 +239,71 @@ top: calc(100vh - 120px);
 to {
 top: calc(100vh - 100px);
 }
+}
+
+#orange_div {
+    background-color: #e74c3c;
+}
+
+#orange_div h1 {
+    text-align: center;
+    color: #fff;
+    font-family: Montserrat;
+    font-weight: 800;
+    font-size: 45px;
+    padding-top: 50px;
+}
+
+.div4 {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 150px;
+}
+
+.div1 {
+    width: 20%;
+    margin-left: 5%;
+    float:left;
+}
+
+.partner_logo {
+    width: 100%;
+}
+
+#underline_partners {
+    width: 100px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+    height: 2px;
+    border: none;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+.white_div {
+    background-color: #fff;
+    min-height: 200px;
+}
+
+.div2 {
+    width: 50%;
+    float: left;
+}
+
+.side_photo {
+    width: 50vw;
+}
+
+.div2 p {
+    padding: 50px;
+    padding-top: 30px;
+}
+
+.div2 h1 {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 20px;
 }

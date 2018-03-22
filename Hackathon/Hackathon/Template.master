@@ -9,7 +9,7 @@
     <link href="<%=Page.ResolveUrl("Style/StyleSheet.css") %>" rel="stylesheet" />
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="Js/JavaScript.js" defer></script>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:300,400,800' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <asp:ContentPlaceHolder ID="head" runat="server">
@@ -41,6 +41,9 @@
                         </li>
                     </a>
                     <li runat="server" id="LoginContainer">
+                        
+                    </li>
+                    <li runat="server" id="UserContainer">
                         
                     </li>
                 </ul>

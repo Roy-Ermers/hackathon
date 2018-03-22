@@ -15,7 +15,12 @@ public partial class MasterPage : System.Web.UI.MasterPage
 			LinkButton link = new LinkButton() { Text = "Login" };
 			link.Click += this.Login;
 			LoginContainer.Controls.Add(link);
-		}
+		} else
+        {
+            var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + Session["CurrentUser"]);
+            LinkButton link = new LinkButton() { Text = "Hello, " + name };
+            UserContainer.Controls.Add(link);
+        }
 
 	}
 	protected void Login(object sender, EventArgs e)
