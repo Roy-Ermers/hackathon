@@ -33,6 +33,7 @@ public partial class Districts : HackPage
 			minBox.TextChanged += (object s, EventArgs a) => ChangeFilterMin(filter, long.Parse(minBox.Text));
 			minCell.Controls.Add(minBox);
 			tr2.Controls.Add(minCell);
+
 			//maximal number
 			TableCell maxCell = new TableCell();
 			TextBox maxBox = new TextBox();
@@ -73,7 +74,7 @@ public partial class Districts : HackPage
 				FilterTable += $"<tr><th colspan=3>{Translator.Translate(f.Name)}</th></tr>" +
 						$"<tr>" +
 	  $"<td>" +
-	  $"<progress min='{f.Min}' max='{f.Max}' value='{value}'></progress><p>{value}</p>" +
+	  $"<progress min='{f.Min}' max='{f.Max}' value='{value}' Style='content: attr(1);'></progress><p>{value}</p>" +
 	  $"</td>" +
 	  $"</tr>";
 			}
@@ -86,7 +87,7 @@ public partial class Districts : HackPage
 								Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";") +
 							"</h1>" +
 							"<div class='district-stats'>" +
-								"<table>" +
+								"<table id='disctrict_table'>" +
 								FilterTable +
 								"</table>" +
 							"</div>" +

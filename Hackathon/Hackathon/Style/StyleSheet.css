@@ -114,7 +114,7 @@ header #navigator #avatar {
 float: left;
 width: 50px;
 height: 50px;
-background: #fff;
+background: rgb(128, 128, 128, 0.8);
 margin-right: 10px;
 margin-top: calc(var(--header-height) / 5);
 border-radius: 50%;
@@ -127,6 +127,7 @@ max-width: 100%;
 max-height: 100%;
 border-radius: 50%;
 margin: 0 auto;
+display: block;
 }
 
 header #languages li img
@@ -306,9 +307,10 @@ height: 50%;
 
 .district-content-title
 {
-text-align: center;
-height: 30px;
-overflow: hidden;
+    text-align: center;
+    height: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .district-content-stats table
@@ -405,4 +407,34 @@ margin-top: 20px;
 
 #UserContainer {
 margin: 0;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 250px;
+    height: 20px;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color: #5e9ce5;
+}
+
+#disctrict_table p {
+    font-family: Roboto;
+    font-weight: 200;
+    color: var(--ColorDarkgray);
+    font-size: 15px;
+    margin-top: -18px;
+    margin-bottom: 10px;
+}
+
+#body_Filters input[type=number] {
+    padding: 10px;
+    width: 100%;
 }
