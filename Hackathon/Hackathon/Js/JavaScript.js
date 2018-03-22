@@ -1,4 +1,6 @@
 ﻿window.scrollTo(0, 0);
+$("#loading").fadeOut(1000);
+
 if ($("#topper").length) {
     $("header").css("background", "transparent");
     $(":root").css("--header-height", "100px");
@@ -30,7 +32,7 @@ $(window).scroll(
 
 var param = new URLSearchParams(location.search);
 var citizen = parseInt(param.get("citizen"));
-var averageAge = parseInt(param.get("averageAge"))
+var averageAge = parseInt(param.get("averageAge"));
 
 $("#citizens").val(citizen);
 $("#averageAge").val(averageAge);

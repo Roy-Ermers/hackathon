@@ -17,6 +17,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="loading">
+            
+        </div>
         <header class=" wow fadeInDown" data-wow-delay="0.8s">
             <div class="container">
                 <a href="Default.aspx">
@@ -62,14 +65,6 @@
             <asp:ContentPlaceHolder ID="body" runat="server">
             </asp:ContentPlaceHolder>
         </main>
-        <footer>
-            <section class="container">
-                <p>
-                    &copy; ... 2018
-                </p>
-              
-            </section>
-        </footer>
     </form>
 </body>
 </html>
