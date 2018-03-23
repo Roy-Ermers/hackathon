@@ -32,8 +32,8 @@
     "Username": "Gebruikersnaam",
     "Password": "Wachtwoord",
     "NO_DATA": "(Geen data bekend)",
-    "min": "Minimaal",
-    "max":  "Maximaal"
+    "min": "Min",
+    "max":  "Max"
   },
   "english": {
     "people": "people",
@@ -68,7 +68,7 @@
     "Username": "Username",
     "Password": "Password",
     "NO_DATA": "(No data found)",
-    "min": "Minimal",
-    "max": "Maximal"
+    "min": "Min",
+    "max": "Max"
   }
 }

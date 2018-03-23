@@ -455,12 +455,11 @@ width: 80%;
 }
 
 #body_Filters td {
-font-family: Roboto;
-font-size: 17px;
-font-weight: 400;
-text-align: center;
-color: #fff;
-padding-top: 10px;
+    font-family: Roboto;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    color: #fff;
 }
 
 #body_district_search {
@@ -625,4 +624,16 @@ color: #fff;
 font-family: Roboto;
 font-weight: 400;
 padding: 10px;
+}
+#body_body_stats_table
+{
+    width: fit-content;
+margin: 0 auto;
+}
+
+#body_Filters p {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 12px;
+    margin-top: 10px;
 }
