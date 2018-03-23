@@ -15,11 +15,11 @@
             </div>
             <div id="login-content">
                 <label for="username">
-                    Username:
+                    <%= Translator.Translate("Username") %>:
                 </label><br />
-                <asp:TextBox TextMode="SingleLine" ID="username" runat="server" placeholder="Username"></asp:TextBox><br />
+                <asp:TextBox TextMode="SingleLine" ID="username" runat="server"></asp:TextBox><br />
                 <label for="password">
-                    Password:
+                    <%= Translator.Translate("Password") %>:
                 </label><br />
                 <asp:TextBox TextMode="password" ID="password" runat="server"></asp:TextBox><br />
                 <button runat="server" OnServerClick="Unnamed1_Click"><%= Translator.Translate("Login") %></button>

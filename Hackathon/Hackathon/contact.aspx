@@ -29,15 +29,15 @@
         <div id="contact_container">
             <h1>Contact</h1>
              <div id="contact_right">
-                <label>Name</label><br />
-                <input type="text" name="name" placeholder="Enter your name"/><br>
+                <label><%= Translator.Translate("Name") %></label><br />
+                <input type="text" name="name" placeholder="<%= Translator.Translate("Enter") %><%= Translator.Translate("Name") %>"/><br>
                 <label>Email</label><br />
-                <input type="email" name="email" placeholder="Enter your email"/><br />
-                <input type="submit" value="Send" />
+                <input type="email" name="email" placeholder="<%= Translator.Translate("Enter") %>Email"/><br />
+                <input type="submit" name="submit" value="<%= Translator.Translate("Send") %>" />
             </div>
             <div id="contact_left">
-                <label>Message</label><br />
-                <textarea id="contact_textarea" placeholder="Enter your message to us"></textarea>
+                <label><%= Translator.Translate("Message") %></label><br />
+                <textarea id="contact_textarea" placeholder="<%= Translator.Translate("Enter") %><%= Translator.Translate("Message") %>"></textarea>
             </div>
         </div>
     </div>
