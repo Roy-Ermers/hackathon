@@ -96,7 +96,7 @@ public partial class Districts : HackPage
 			}
 			var name = Sql.ScalarQuery("SELECT Name FROM [User] WHERE Id = " + i + ";");
 
-			districts.InnerHtml += @"<a href='/" + name + "'><div class='district'>" +
+			districts.InnerHtml += @"<a href='/" + name + "'><div class='district wow fadeInUp'>" +
 									"<div class='district-top'>" +
 										"<img id='avatar' src='" + UserAccount.ProfilePicture(i) + "'>" +
 									"</div>" +

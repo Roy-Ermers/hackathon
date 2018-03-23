@@ -78,6 +78,7 @@ margin: 0 auto;
 
 .dashboard_content {
     margin-left: 250px;
+    text-align: center;
 }
 
 #dashboard_header_image img {
@@ -95,12 +96,6 @@ margin: 0 auto;
 
 .dashboard_info p {
     text-align: justify;
-}
-
-.dashboard_info {
-    width: 800px;
-    display: block;
-    margin: 0 auto;
 }
 
 #maps_background {
@@ -173,4 +168,17 @@ input[type=file] {
 
 iframe {
     pointer-events: none;
+}
+
+.dashboard_stats
+
+{
+text-align: center;
+}
+
+#form1 > main > div > div.dashboard_info > p {
+    width: 50%;
+text-align: justify;
+margin: 0 auto;
+margin-bottom: 20px;
 }

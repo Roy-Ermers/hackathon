@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="profile.aspx.cs" Inherits="profile" %>
+﻿<%@ Page Title="Brabant2Go | Profile" Language="C#" MasterPageFile="~/Template.master" AutoEventWireup="true" CodeFile="profile.aspx.cs" Inherits="profile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <link href="<%=Page.ResolveUrl("Style/dashboard.css") %>" rel="stylesheet" />
