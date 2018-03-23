@@ -33,7 +33,7 @@
                 <input type="text" name="name" placeholder="Enter your name"/><br>
                 <label>Email</label><br />
                 <input type="email" name="email" placeholder="Enter your email"/><br />
-                <input type="submit" name="submit" value="Send" />
+                <input type="submit" value="Send" />
             </div>
             <div id="contact_left">
                 <label>Message</label><br />
