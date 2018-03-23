@@ -31,7 +31,9 @@
     "Enter": "Type hier je ",
     "Username": "Gebruikersnaam",
     "Password": "Wachtwoord",
-    "NO_DATA": "(Geen data bekend)"
+    "NO_DATA": "(Geen data bekend)",
+    "min": "Minimaal",
+    "max":  "Maximaal"
   },
   "english": {
     "people": "people",
@@ -65,7 +67,8 @@
     "Enter": "Enter here your ",
     "Username": "Username",
     "Password": "Password",
-    "NO_DATA": "(No data found)"
-
+    "NO_DATA": "(No data found)",
+    "min": "Minimal",
+    "max": "Maximal"
   }
 }
