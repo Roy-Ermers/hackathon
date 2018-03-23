@@ -169,3 +169,16 @@ input[type=file] {
 iframe {
     pointer-events: none;
 }
+
+.dashboard_stats
+
+{
+text-align: center;
+}
+
+#form1 > main > div > div.dashboard_info > p {
+    width: 50%;
+text-align: justify;
+margin: 0 auto;
+margin-bottom: 20px;
+}
