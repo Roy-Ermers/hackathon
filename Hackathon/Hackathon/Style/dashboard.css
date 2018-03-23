@@ -92,6 +92,8 @@ margin: 0 auto;
 .dashboard_info h1 {
     text-align: center;
     padding: 20px;
+    font-family: Roboto;
+    font-weight: bold;
 }
 
 .dashboard_info p {
@@ -181,4 +183,11 @@ text-align: center;
 text-align: justify;
 margin: 0 auto;
 margin-bottom: 20px;
+}
+
+.dashboard_stats h1 {
+    text-align: center;
+    padding: 20px;
+    font-family: Roboto;
+    font-weight: bold;
 }

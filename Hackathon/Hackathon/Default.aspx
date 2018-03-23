@@ -14,9 +14,9 @@
                 <h1 id="title" class="wow fadeInUp" data-wow-delay="0.2s">
                     <%=Translator.Translate("Intro") %>
                 </h1>
-                <button class="wow fadeInUp" data-wow-delay="0.6s">
+                <a class="wow fadeInUp button" data-wow-delay="0.6s" href="<%= Page.ResolveUrl("districts.aspx") %>">
                     <%=Translator.Translate("FindDist") %>
-                </button>
+                </a>
                 <h1 id="down" class="wow fadeInUp" data-wow-delay="0.2s">
                     ▼
                 </h1>

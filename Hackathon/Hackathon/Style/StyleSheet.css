@@ -162,7 +162,8 @@ margin-top: 120px;
 color: #fff;
 }
 
-#topper button {
+#topper .button {
+    display: inline-block;
 padding: 10px 30px;
 color: #fff;
 font-weight: bold;
@@ -184,7 +185,7 @@ font-size: 50px;
 animation: bounce 2.5s infinite;
 }
 
-#topper button:hover {
+#topper .button:hover {
 background: #c0392b;
 border-color: #c0392b;
 }
@@ -405,11 +406,11 @@ padding-top: 30px;
 }
 
 .div2 h1 {
-font-family: Montserrat;
-font-size: 36px;
-font-weight: 800;
-text-align: center;
-margin-top: 20px;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 150px;
 }
 
 #UserContainer {
@@ -618,16 +619,26 @@ background: #2ecc71;
 }
 
 
-#body_body_stats_table td h1, #body_body_stats_table td p, #body_stats_table td h1, #body_stats_table td p {
+#body_body_stats_table td h1, #body_body_stats_table td p, #body_stats_table td h1 {
 text-align: center;
 color: #fff;
 font-family: Roboto;
-font-weight: 400;
+font-weight: 200;
 padding: 10px;
 }
+
+#body_stats_table td p {
+    text-align: center;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
 #body_body_stats_table
 {
-    width: fit-content;
+width: fit-content;
 margin: 0 auto;
 }
 
@@ -636,4 +647,9 @@ margin: 0 auto;
     font-family: Roboto;
     font-size: 12px;
     margin-top: 10px;
+}
+
+#body_Filters > tbody > tr > th {
+    padding-top: 40px;
+    color: #fff;
 }
