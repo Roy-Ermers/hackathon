@@ -78,6 +78,7 @@ margin: 0 auto;
 
 .dashboard_content {
     margin-left: 250px;
+    text-align: center;
 }
 
 #dashboard_header_image img {
@@ -95,12 +96,6 @@ margin: 0 auto;
 
 .dashboard_info p {
     text-align: justify;
-}
-
-.dashboard_info {
-    width: 800px;
-    display: block;
-    margin: 0 auto;
 }
 
 #maps_background {
