@@ -593,3 +593,8 @@ progress[value]::-webkit-progress-value {
 .district-stats th {
     padding-top: 10px;
 }
+#body_body_stats_table
+{
+    width: fit-content;
+margin: 0 auto;
+}
