@@ -28,8 +28,8 @@
             <div class="div4">
                 <div class="div1">
                     <img class="partner_logo" src="<%=Page.ResolveUrl("Images/ing.png") %>"/>
-                </div>                <div class="div1">
-
+                </div>                
+                <div class="div1">
                     <img class="partner_logo" src="<%=Page.ResolveUrl("Images/bijenkorf.png") %>"/>
                 </div>
                 <div class="div1">

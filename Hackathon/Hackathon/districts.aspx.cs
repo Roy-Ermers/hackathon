@@ -16,7 +16,7 @@ public partial class Districts : HackPage
 		{
 			var qry = Sql.Query("SELECT MIN(StatValue), MAX(StatValue) FROM Stat WHERE StatName = '" + filter + "'; ");
 			qry.Read();
-			long min = qry.GetInt64(0);
+			long min = 0;
 			long max = qry.GetInt64(1);
 
 			filters.Add(new Filter(filter, min, max));
