@@ -23,7 +23,13 @@
     "Inhabs": "Inwoners",
     "Households": "Huishoudens",
     "aboutBrabant": "OVER BRABANT",
-    "stats": "Statistieken"
+    "stats": "Statistieken",
+    "Message": "Bericht",
+    "Name": "Naam",
+    "Send": "Verzenden",
+    "Enter": "Type hier je ",
+    "Username": "Gebruikersnaam",
+    "Password": "Wachtwoord"
   },
   "english": {
     "people": "people",
@@ -49,7 +55,12 @@
     "Inhabs": "Citizens",
     "Households": "Householdings",
     "aboutBrabant": "ABOUT BRABANT",
-    "stats": "Statistics"
-
+    "stats": "Statistics",
+    "Message": "Message",
+    "Name": "Name",
+    "Send": "Send",
+    "Enter": "Enter here your ",
+    "Username": "Username",
+    "Password": "Password"
   }
 }
