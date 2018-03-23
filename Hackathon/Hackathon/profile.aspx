@@ -30,8 +30,10 @@
         </div>
         <% if (type.ToString() == "1"){ %>
         <div class="dashboard_stats">
-            <h1>Stats Gemeente</h1>
-            
+            <h1><%=Translator.Translate("stats") + " " + Translator.Translate("district") %></h1>
+            <asp:Table runat="server" ID="stats_table">
+
+            </asp:Table>
         </div>
             <%} %>
     </div>
