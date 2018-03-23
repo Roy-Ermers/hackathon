@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dashboard.master" AutoEventWireup="true" CodeFile="dashboard.aspx.cs" Inherits="dashboard" %>
+﻿<%@ Page Title="Brabant2Go | Dashboard" Language="C#" MasterPageFile="~/Dashboard.master" AutoEventWireup="true" CodeFile="dashboard.aspx.cs" Inherits="dashboard" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     

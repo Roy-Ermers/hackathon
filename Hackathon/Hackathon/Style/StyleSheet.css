@@ -460,7 +460,6 @@ progress[value]::-webkit-progress-value {
     font-weight: 400;
     text-align: center;
     color: #fff;
-    padding-top: 10px;
 }
 
 #body_district_search {
@@ -597,4 +596,11 @@ progress[value]::-webkit-progress-value {
 {
     width: fit-content;
 margin: 0 auto;
+}
+
+#body_Filters p {
+    text-align: left;
+    font-family: Roboto;
+    font-size: 12px;
+    margin-top: 10px;
 }
