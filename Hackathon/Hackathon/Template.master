@@ -18,8 +18,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <% Boolean indexpage = false; %>
         <div id="loading"></div>
-        <header class=" wow fadeInDown" data-wow-delay="0.8s">
+        <% if (indexpage) { %>
+            <header class="wow fadeInDown" data-wow-delay="0.8s">
+            <% } else { %>
+            <header>
+            <% } %>
             <div class="container">
                 <a href="Default.aspx">
                     <h1 id="logo">

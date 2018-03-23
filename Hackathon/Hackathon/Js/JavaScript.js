@@ -1,4 +1,7 @@
-﻿window.scrollTo(0, 0);
+﻿$(window).ready(function () {
+    $(this).scrollTop(0);
+});
+ 
 $("#loading").fadeOut(1000);
 
 if ($("#topper").length) {
@@ -11,7 +14,6 @@ var scroll = 0;
 $(window).scroll(
     function () {
         var top = $(this).scrollTop();
-        console.log(top);
 
         if (top > scroll) {
             if ($("#topper").length) {

@@ -33,7 +33,7 @@
                 <input type="text" name="name" placeholder="<%= Translator.Translate("Enter") %><%= Translator.Translate("Name") %>"/><br>
                 <label>Email</label><br />
                 <input type="email" name="email" placeholder="<%= Translator.Translate("Enter") %>Email"/><br />
-                <input type="submit" name="submit" value="<%= Translator.Translate("Send") %>" />
+                <input type="submit" value="<%= Translator.Translate("Send") %>" />
             </div>
             <div id="contact_left">
                 <label><%= Translator.Translate("Message") %></label><br />
