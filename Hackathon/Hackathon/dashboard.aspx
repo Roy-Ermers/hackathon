@@ -7,8 +7,12 @@
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
     <% var name = Sql.ScalarQuery("Select Name FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
-    <% var info = Sql.ScalarQuery("Select Info FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
-    <% var type = Sql.ScalarQuery("Select Type FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
+    <% var info = Sql.ScalarQuery("Select Info FROM [User] WHERE Id = " + Request.QueryString["UserID"]);
+        if (string.IsNullOrEmpty(info.ToString()))
+        {
+            info = Translator.Translate("NO_DATA");
+        }
+        %>    <% var type = Sql.ScalarQuery("Select Type FROM [User] WHERE Id = " + Request.QueryString["UserID"]); %>
     
     <div class="dashboard_content">
         <div class="dashboard_header">

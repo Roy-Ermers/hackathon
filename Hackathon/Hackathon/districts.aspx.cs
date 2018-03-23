@@ -23,7 +23,7 @@ public partial class Districts : HackPage
 			filters.Add(new Filter(filter, min, max));
 
 			TableRow tr = new TableRow();
-			tr.Controls.Add(new TableCell() { Text = Translator.Translate(filter), ColumnSpan = 2 });
+			tr.Controls.Add(new TableHeaderCell() { Text = Translator.Translate(filter), ColumnSpan = 2 });
 			Filters.Controls.Add(tr);
 
 			//add minimal label
