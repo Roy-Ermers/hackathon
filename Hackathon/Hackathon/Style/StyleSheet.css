@@ -590,3 +590,8 @@ progress[value]::-webkit-progress-value {
     margin-left: 10%;
 }
 
+#body_body_stats_table
+{
+    width: fit-content;
+margin: 0 auto;
+}
