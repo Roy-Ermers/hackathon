@@ -9,6 +9,7 @@
     "Intro": "HIER VIND JE DE BESTE GEMEENTE<br>VOOR UW BEDRIJF.",
     "FindDist": "VIND EEN GEMEENTE",
     "Districts": "Gemeenten",
+    "district": "Gemeente",
     "dashboard": "Dashboard",
     "settings": "Instellingen",
     "password": "Wachtwoord",
@@ -29,7 +30,8 @@
     "Send": "Verzenden",
     "Enter": "Type hier je ",
     "Username": "Gebruikersnaam",
-    "Password": "Wachtwoord"
+    "Password": "Wachtwoord",
+    "NO_DATA": "(Geen data bekend)"
   },
   "english": {
     "people": "people",
@@ -41,6 +43,7 @@
     "Intro": "HERE YOU CAN FIND THE BEST<br>DISTRICT FOR YOUR COMPANY.",
     "FindDist": "FIND A DISTRICT",
     "Districts": "Districts",
+    "district": "District",
     "dashboard": "Dashboard",
     "settings": "Settings",
     "password": "Password",
@@ -61,6 +64,8 @@
     "Send": "Send",
     "Enter": "Enter here your ",
     "Username": "Username",
-    "Password": "Password"
+    "Password": "Password",
+    "NO_DATA": "(No data found)"
+
   }
 }
